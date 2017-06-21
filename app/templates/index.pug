@@ -1,0 +1,1159 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Main page'
+block content
+    #header
+        .navbar.navbar-default.navbar-static-top
+          .main_menu
+            .container
+              .row
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                  .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                      span.icon-bar
+                      span.icon-bar
+                      span.icon-bar
+                  .navbar-collapse.collapse
+                    ul.nav.navbar-nav
+                      li.active
+                        a(href='#') Анализы и цены
+                      li
+                        a(href='#') Консалтинг
+                      li
+                        a(href='#') Условия сотрудничества
+                      li
+                        a(href='#') Лаборатории
+                      li
+                        a(href='#') О компании
+        .medical_institutions_doctors
+          .top_rectangle
+            span#tr1.tr_top
+            span#tr2.tr_top
+            span#tr3.tr_top
+            span#tr4.tr_top
+          .mid_ttl
+            h1 Медицинским учреждениям и врачам
+          .btm_rectangle
+            span#tr5.tr_top
+            span#tr6.tr_top
+            span#tr7.tr_top
+          .r_rectangle
+            span#tr8.tr_top
+            span#tr9.tr_top
+        //
+          <ul class="mid_list">
+          <li>
+          <div class="desc">
+          <img src="img/i4.png" alt="">
+          <div class="brdh"></div>
+          <p>Широкий спектр услуг центральной лаборатории</p>
+          </div>
+          </li>
+          <li>
+          <div class="desc">
+          <img src="img/i1.png" alt="">
+          <div class="brdh"></div>
+          <p>Высокое качество лабораторных исследований</p>
+          </div>
+          </li>
+          <li>
+          <div class="desc">
+          <img src="img/i5.png" alt="">
+          <div class="brdh"></div>
+          <p>Медицинский и лабораторный консалтинг </p>
+          </div>
+          </li>
+          </ul>
+        .mid_list
+          .swiper-container.mid_list_slr
+            .swiper-wrapper
+              .swiper-slide
+                ul.mid_list
+                  li
+                    .desc
+                      img(src='img/i4.png', alt='')
+                      .brdh
+                      p Широкий спектр услуг центральной лаборатории
+              .swiper-slide
+                ul.mid_list
+                  li
+                    .desc
+                      img(src='img/i1.png', alt='')
+                      .brdh
+                      p Высокое качество лабораторных исследований
+              .swiper-slide
+                ul.mid_list
+                  li
+                    .desc
+                      img(src='img/i5.png', alt='')
+                      .brdh
+                      p Медицинский и лабораторный консалтинг 
+    // header
+    #wrapper
+      .make_deal
+        ul.make_deal_list
+          li
+            .desc
+              img(src='img/i6.png', alt='')
+              .md_in
+                a.fancybox(href='#enter_contract')
+                  h5 Заключить договор
+                p Разработка индивидуального ценового предложения
+          li
+            .desc
+              img(src='img/i7.png', alt='')
+              .md_in
+                a(href='docs/Клинико-диагностическая_лаборатория_ЛабКвест.pdf', target='_blank')
+                  h5 Скачать презентацию
+                p Время получать новый уровень сервиса
+          li
+            .desc
+              img(src='img/i8.png', alt='')
+              .md_in
+                a(href='docs/Каталог лабораторных исследований.xlsx', download='')
+                  h5 Скачать каталог
+                p Диагностика без границ. Ввод новых тестов по запросу
+        .make_deal_line
+        #md_trigger
+      .d3_tur
+        .desc_txt
+          p Многопрофильный производственный комплекс LabQuest открыт!
+        // <a href="#">
+        .d3c
+          .crc
+            p.tur_txt the future
+            p.lab lab
+            .of of
+            .new_txt
+              .n
+                img(src='img/n.png', alt='')
+              .e
+                img(src='img/e.png', alt='')
+              .w
+                img(src='img/w.png', alt='')
+            .play
+        // </a>
+        .crc_lines
+          .crc_ln0
+          .crc_ln1
+          .crc_ln2
+      .service_support
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              .ss_txt
+                h3 Сервисная поддержка
+                .brdh
+                p
+                  | Специальное предложение — бесплатная установка МИС с модулем диагностических алгоритмов. Подробности у вашего менеджера
+                a.business_inquiry.fancybox(href='#enter_contract') Сделать бизнес-запрос
+      .guide_forms
+        h2 Направительные бланки
+        .guide_forms_slr
+          .gfs_nav
+            .swiper-pagination
+            .swiper-button-prev
+            .swiper-button-next
+          .swiper-container.gfs
+            .swiper-wrapper
+              .swiper-slide
+                ul.gfs_list
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span DA
+                            |  Бактериологические исследования
+                        span (636 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_DA01.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span DB
+                            |  Бактериологические исследования (продолжение)
+                        span (619 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_DB01.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span E
+                            |  Аллергологические исследования
+                        span (722 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_E14.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span L
+                            |  Гистологические исследования
+                        span (576 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_L04.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span LG
+                            |  Иммуногистохимические исследования
+                        span (551 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_LG03.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span MD
+                            |  Цитогенетические исследования
+                        span (493 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_MD05.pdf', target='_blank') Скачать PDF
+              .swiper-slide
+                ul.gfs_list
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span AF
+                            |  Иммуногематология. Гемостазиограмма...
+                          // p>Иммуногематология. Гемостазиограмма. Биохимия. Белки-маркеры. Гормоны. Аутоантитела. Онкомаркеры. Маркеры гепатитов и сифилиса</p
+                        span (905 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_AF21.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span BE
+                            |  ИФА. Маркеры инфекций РПГА. Маркеры инфекций...
+                          // p>ИФА. Маркеры инфекций РПГА. Маркеры инфекций ПЦР. Маркеры инфекций</p
+                        span (736 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_BE22.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span CM
+                            |  ПЦР. Урогенитальные инфекции. Программы...
+                          // p>ПЦР. Урогенитальные инфекции. Программы исследований. NASBA. Урогенитальные инфекции. Микроскопическое исследование мазков</p
+                        span (687 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_CM15.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span G
+                            |  Цитологические исследования. Окраска по...
+                          // <p>Цитологические исследования. Окраска по Лейшману и Папаниколау, жидкостная цитология. ПЦР. Маркеры папилломавирусной инфекции</p>
+                        span (1,07 Mб)
+                      .desc_btn
+                        a(href='docs/LQ_G07.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span X
+                            |  ПЦР. Респираторные инфекции...
+                          // <p>ПЦР. Респираторные инфекции, ЦНС-инфекции, кишечные инфекции. ИФА. Респираторные инфекции</p>
+                        span (687 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_X10.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span XC
+                            |  ПЦР. Исследование клеща на клещевые...
+                          // <p>ПЦР. Исследование клеща на клещевые инфекции. Вирус Зика</p>
+                        span (541 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_XC04.pdf', target='_blank') Скачать PDF
+              .swiper-slide
+                ul.gfs_list
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span Q
+                            |  Гистологические исследования...
+                          // <p>Гистологические исследования. Мультифокальная биопсия предстательной железы</p>
+                        span (343 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_Q03.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span M
+                            |  Исследование мочи, кала, эякулята, соскоб на ...
+                          // <p>Исследование мочи, кала, эякулята, соскоб на энтеробиоз. Микроскопическое исследование, дерматология</p>
+                        span (623 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_M16.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span N
+                            |  Иммунный и интерфероновый статус...
+                          // <p>Иммунный и интерфероновый статус. Аутоантитела</p>
+                        span (633 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_N15.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span P
+                            |  Цитологические исследования...
+                          // <p>Цитологические исследования. Диагностические исследования</p>
+                        span (468 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_P03.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span T
+                            |  Микроэлементы. Химический состав мочевого камня
+                          // <p>Микроэлементы. Химический состав мочевого камня</p>
+                        span (609 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_T04.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span V
+                            |  ИФА. Исследование крови на ВИЧ-инфекцию.
+                        span (215 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_V06.pdf', target='_blank') Скачать PDF
+              .swiper-slide
+                ul.gfs_list
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span YA
+                            |  Генетические исследования
+                        span (778 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_YA07.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span FC
+                            |  Программы обследований. Флороценоз
+                        span (546 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_FC03.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span R
+                            |  Программы обследований. Гастропанель...
+                          // <p>Программы обследований. Гастропанель. Квантифероновый тест</p>
+                        span (572 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_R04.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZC
+                            |  Программы обследований для детей
+                        span (248 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZC03.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZD
+                            |  Программы обследований. Углеводный обмен
+                        span (513 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZD01.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZE
+                            |  Программы обследований. Гормоны...
+                          // <p>Программы обследований. Гормоны. Маркеры инфекций. Онкомаркеры. Диагностика заболеваний печени и почек</p>
+                        span (526 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZE02.pdf', target='_blank') Скачать PDF
+              .swiper-slide
+                ul.gfs_list
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZF
+                            |  Программы обследований для госпитализации
+                        span (430 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZF02.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZH
+                            |  Программы обследований. Диагностика анемий...
+                          // <p>Программы обследований. Диагностика анемий. Диагностика аутоимунных заболеваний. Остеопороз.</p>
+                        span (595 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZH01.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZM
+                            |  Программы обследований. Биохимия. Гемостаз...
+                          // <p>Программы обследований. Биохимия. Гемостаз. Риск развития атеросклероза. Паразитология</p>
+                        span (300 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZM01.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span S
+                            |  Программы обследований. Пренатальный скриниг
+                        span (415 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_S07.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZY
+                            |  Программы обследований для мужчин...
+                          // <p>Программы обследований для мужчин при планировании беременности.</p>
+                        span (385 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZY01.pdf', target='_blank') Скачать PDF
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZQ
+                            |  Программы обследований для беременных
+                        span (483 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZQ01.pdf', target='_blank') Скачать PDF
+              .swiper-slide
+                ul.gfs_list
+                  li
+                    .desc
+                      .desc_txt
+                        .desc_txt_in
+                          p
+                            span ZR
+                            |  Программы обследований при планировании...
+                          // <p> Программы обследований при планировании беременности</p>
+                        span (389 Кб)
+                      .desc_btn
+                        a(href='docs/LQ_ZR01.pdf', target='_blank') Скачать PDF
+        .guide_forms_list
+          ul.gf_list
+            li
+              .clearfix.desc
+                a(href='docs/LQ_AF21.pdf', target='_blank')
+                  h4
+                    b AF
+                    |  Иммуногематология. Гемостазиограмма. Биохимия. Белки-маркеры. Гормоны. Аутоантитела. Онкомаркеры. Маркеры гепатитов и сифилиса
+                  span (905 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_BE22.pdf', target='_blank')
+                  h4
+                    b BE
+                    |  ИФА. Маркеры инфекций РПГА. Маркеры инфекций ПЦР. Маркеры инфекций
+                  span (736 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_CM15.pdf', target='_blank')
+                  h4
+                    b CM
+                    |  ПЦР. Урогенитальные инфекции. Программы исследований. NASBA. Урогенитальные инфекции. Микроскопическое исследование мазковий
+                  span (687 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_DA01.pdf', target='_blank')
+                  h4
+                    b DA
+                    |  Бактериологические исследования
+                  span (636 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_DB01.pdf', target='_blank')
+                  h4
+                    b DB
+                    |  Бактериологические исследования (продолжение)
+                  span (619 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_E14.pdf', target='_blank')
+                  h4
+                    b E
+                    |  Аллергологические исследования
+                  span (722 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_FC03.pdf', target='_blank')
+                  h4
+                    b FC
+                    |   Программы обследований. Флороценоз
+                  span (546 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_G07.pdf', target='_blank')
+                  h4
+                    b G
+                    |  Цитологические исследования. Окраска по Лейшману и Папаниколау, жидкостная цитология. ПЦР. Маркеры папилломавирусной инфекции
+                  span (1,07 Mб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_L04.pdf', target='_blank')
+                  h4
+                    b L
+                    |  Гистологические исследования
+                  span (576 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_LG03.pdf', target='_blank')
+                  h4
+                    b LG
+                    |  Иммуногистохимические исследования
+                  span (551 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_M16.pdf', target='_blank')
+                  h4
+                    b M
+                    |  Исследование мочи, кала, эякулята, соскоб на энтеробиоз. Микроскопическое исследование, дерматология
+                  span (623 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_MD05.pdf', target='_blank')
+                  h4
+                    b MD
+                    |  Цитогенетические исследования
+                  span (493 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_N15.pdf', target='_blank')
+                  h4
+                    b N
+                    |  Иммунный и интерфероновый статус. Аутоантитела
+                  span (633 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_P03.pdf', target='_blank')
+                  h4
+                    b P
+                    |  Цитологические исследования. Диагностические исследования
+                  span (468 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_Q03.pdf', target='_blank')
+                  h4
+                    b Q
+                    |  Гистологические исследования. Мультифокальная биопсия предстательной железы
+                  span (343 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_R04.pdf', target='_blank')
+                  h4
+                    b R
+                    |  Программы обследований. Гастропанель. Квантифероновый тест
+                  span (572 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_S07.pdf', target='_blank')
+                  h4
+                    b S
+                    |  Программы обследований. Пренатальный скриниг
+                  span (415 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_T04.pdf', target='_blank')
+                  h4
+                    b T
+                    |  Микроэлементы. Химический состав мочевого камня
+                  span (609 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_V06.pdf', target='_blank')
+                  h4
+                    b V
+                    |  ИФА. Исследование крови на ВИЧ-инфекцию
+                  span (215 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_X10.pdf', target='_blank')
+                  h4
+                    b X
+                    |  ПЦР. Респираторные инфекции, ЦНС-инфекции, кишечные инфекции. ИФА. Респираторные инфекции
+                  span (687 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_XC04.pdf', target='_blank')
+                  h4
+                    b XC
+                    |  ПЦР. Исследование клеща на клещевые инфекции. Вирус Зика
+                  span (541 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_YA07.pdf', target='_blank')
+                  h4
+                    b YA
+                    |   Генетические исследования
+                  span (778 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZC03.pdf', target='_blank')
+                  h4
+                    b ZC
+                    |  Программы обследований для детей
+                  span (248 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZD01.pdf', target='_blank')
+                  h4
+                    b ZD
+                    |  Программы обследований. Углеводный обмен
+                  span (513 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZE02.pdf', target='_blank')
+                  h4
+                    b ZE
+                    |  Программы обследований. Гормоны. Маркеры инфекций. Онкомаркеры. Диагностика заболеваний печени и почек
+                  span (526 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZF02.pdf', target='_blank')
+                  h4
+                    b ZF
+                    |  Программы обследований для госпитализации
+                  span (430 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZH01.pdf', target='_blank')
+                  h4
+                    b ZH
+                    |  Программы обследований. Диагностика анемий. Диагностика аутоимунных заболеваний. Остеопороз
+                  span (595 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZM01.pdf', target='_blank')
+                  h4
+                    b ZM
+                    |  Программы обследований. Биохимия. Гемостаз. Риск развития атеросклероза. Паразитология
+                  span (300 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZY01.pdf', target='_blank')
+                  h4
+                    b ZY
+                    |  Программы обследований для мужчин при планировании беременности
+                  span (385 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZQ01.pdf', target='_blank')
+                  h4
+                    b ZQ
+                    |  Программы обследований для беременных
+                  span (483 Кб)
+            li
+              .clearfix.desc
+                a(href='docs/LQ_ZR01.pdf', target='_blank')
+                  h4
+                    b ZR
+                    |  Программы обследований при планировании беременности
+                  span (389 Кб)
+        .show_btn_list
+          button Показать списком
+      .five_people
+        .fp_bg
+          .fp_bg_in
+            #fp_txt1.fp_txt
+              span 1
+              p Выездные лекции
+            #fp_txt2.fp_txt
+              span 2
+              p Тренинговые схемы продаж
+            #fp_txt3.fp_txt
+              span 3
+              p Тематическое консультирование
+            #fp_txt4.fp_txt
+              span 4
+              p Методологическая поддержка
+            .rec_line
+              .rec_line_in
+                .rl_img
+                  img(src='img/icap.svg', alt='')
+                h2 Обучение
+                .brdh
+                p для врачей и среднего медицинского персонала
+                #rl1.rl
+                #rl2.rl
+                #rl3.rl
+                #rl4.rl
+                #rl5.rl
+                #rl6.rl
+                #rl7.rl
+                #rl8.rl
+                #rl9.rl
+                #rl10.rl
+                #rl11.rl
+                #rl12.rl
+                #rl13.rl
+      .ask_your_question
+        .clearfix.auq_in
+          .auq_in_ttl
+            h3 Задать нам вопрос
+            .brdh
+          .auq_form
+            #af1.af
+            #af2.af
+            #af3.af
+            #af4.af
+            #af5.af
+            #af6.af
+            #af7.af
+            #af8.af
+            #af9.af
+            form(action='#', method='post')
+              .af_inpt
+                .afi_inp
+                  input(type='text', placeholder='Имя*')
+                .afi_inp
+                  input.email(type='text', placeholder='E-mail*')
+                .afi_txtr
+                  textarea(placeholder='Ваше сообщение*')
+                .afi_btn
+                  button Отправить
+      .blc_news
+        .blc_news_ttl
+          h2 Новости
+        .swiper-container.news_slr
+          .swiper-wrapper
+            .swiper-slide
+              ul.news_list
+                li
+                  .desc
+                    a(href='#')
+                      .clearfix.desc_date
+                        .date
+                          h3 12
+                          .clearfix.date_in
+                            p мар
+                            span '17
+                        .d_img
+                          img(src='img/empty_news.jpg', alt='')
+                      .desc_txt
+                        h4 ECCMID 2017 года
+                        .brdh
+                        p
+                          | 22-25 апреля в Вене пройдет Европейский конгресс по клинической микробиологии и инфекционным заболеваниям. Делегатами конгресса станут специалисты «ЛабКвест».
+                        //
+                          <div class="read_more">
+                          <span>Подробнее</span>
+                          </div>
+            .swiper-slide
+              ul.news_list
+                li
+                  .desc
+                    a(href='')
+                      .clearfix.desc_date
+                        .date
+                          h3 10
+                          .clearfix.date_in
+                            p мар
+                            span '17
+                        .d_img
+                          img(src='img/empty_news.jpg', alt='')
+                      .desc_txt
+                        h4 «ЛабКвест» начала прием биоматериала
+                        .brdh
+                        p
+                          | В «ЛабКвест» выполнен первый лабораторный тест для столичного медицинского центра. Прием биоматериала осуществляется ежедневно.
+                        //
+                          <div class="read_more">
+                          <span>Подробнее</span>
+                          </div>
+            .swiper-slide
+              ul.news_list
+                li
+                  .desc
+                    a(href='')
+                      .clearfix.desc_date
+                        .date
+                          h3 01
+                          .clearfix.date_in
+                            p мар
+                            span '17
+                        .d_img
+                          img(src='img/empty_news.jpg', alt='')
+                      .desc_txt
+                        h4 Компания «ЛабКвест» вышла на рынок лабораторной диагностики РФ
+                        .brdh
+                        p
+                          | В Москве открылся лабораторный комплекс АО «ЛабКвест». Компания начала свое развитие с сотрудничества с медучреждениями Москвы и регионов.
+                        //
+                          <div class="read_more">
+                          <span>Подробнее</span>
+                          </div>
+        //
+          <ul class="news_list">
+          <li>
+          <div class="desc">
+          <a href="#">
+          <div class="clearfix desc_date">
+          <div class="date">
+          <h3>12</h3>
+          <div class="clearfix date_in">
+          <p>мар</p>
+          <span>'17</span>
+          </div>
+          </div>
+          <div class="d_img"><img src="img/empty_news.jpg" alt=""></div>
+          </div>
+          <div class="desc_txt">
+          <h4>ECCMID 2017 года</h4>
+          <div class="brdh"></div>
+          <p>22-25 апреля в Вене пройдет Европейский конгресс по клинической микробиологии и инфекционным заболеваниям. Делегатами конгресса станут специалисты LabQuest.</p>
+          <div class="read_more">
+          <span>Подробнее</span>
+          </div>
+          </div>
+          </a>
+          </div>
+          </li>
+          <li>
+          <div class="desc">
+          <a href="">
+          <div class="clearfix desc_date">
+          <div class="date">
+          <h3>10</h3>
+          <div class="clearfix date_in">
+          <p>мар</p>
+          <span>'17</span>
+          </div>
+          </div>
+          <div class="d_img"><img src="img/empty_news.jpg" alt=""></div>
+          </div>
+          <div class="desc_txt">
+          <h4>LabQuest начала прием биоматериала</h4>
+          <div class="brdh"></div>
+          <p>В LabQuest выполнен первый лабораторный тест для столичного медицинского центра. Прием биоматериала осуществляется ежедневно.</p>
+          <div class="read_more">
+          <span>Подробнее</span>
+          </div>
+          </div>
+          </a>
+          </div>
+          </li>
+          <li>
+          <div class="desc">
+          <a href="">
+          <div class="clearfix desc_date">
+          <div class="date">
+          <h3>01</h3>
+          <div class="clearfix date_in">
+          <p>мар</p>
+          <span>'17</span>
+          </div>
+          </div>
+          <div class="d_img"><img src="img/empty_news.jpg" alt=""></div>
+          </div>
+          <div class="desc_txt">
+          <h4>Компания «ЛабКвест» вышла на рынок лабораторной диагностики РФ</h4>
+          <div class="brdh"></div>
+          <p>В Москве открылся лабораторный комплекс АО «ЛабКвест». Компания начала свое развитие с сотрудничества с медучреждениями Москвы и регионов.</p>
+          <div class="read_more">
+          <span>Подробнее</span>
+          </div>
+          </div>
+          </a>
+          </div>
+          </li>
+          </ul>
+        //
+          <div class="blc_news_btn">
+          <a href="#" class="link_news_archive">Архив новостей</a>
+          </div>
+      .clearfix.visit_career
+        #vc1.vc
+          h3 Посетить лабораторию
+          .brdh
+          p Личный визит — лучший способ получить представление о лаборатории! 
+          .submit_application
+            a.fancybox(href='#visit_lab') Оставить заявку
+        #vc2.vc
+          h3 Начните карьеру
+          .brdh
+          p Присоединяйтесь к команде врачей, специалистов и руководителей
+          .submit_application
+            a.fancybox(href='#job_seekers') Оставить заявку
+      .ftr
+        .container
+          .row
+            .col-xs-12.col-sm-12.col-md-12.col-lg-12
+              .clearfix.ftr_top
+                .flogo
+                  // <a href="index.html">
+                  img(src='img/logo_footer.svg', alt='')
+                  // </a>
+                .fphone
+                  a(href='tel:88007001072') 8 (800) 700 10 72
+                  a(href='tel:84957251072') 8 (495) 725 10 72
+                .fcnt
+                  .fcnt_btn
+                    a.fancybox(href='#enter_contract') Заключить договор
+        .clearfix.ftr_btm
+          .fb_cnt
+            ul.fb_cnt_list
+              li
+                .desc
+                  .desc_img
+                    img(src='img/i19.png', alt='')
+                  p Москва, Бережковская наберeжная, д. 20, стр. 13
+              li
+                .desc
+                  .desc_img
+                    img(src='img/i20.png', alt='')
+                  p
+                    | Бизнес-запрос 
+                    a(href='mailto:info@labquest.ru') info@labquest.ru
+              li
+                .desc
+                  .desc_img
+                    img(src='img/i20.png', alt='')
+                  p
+                    | Медиа-запрос 
+                    a(href='mailto:pr@labquest.ru') pr@labquest.ru
+              li
+                .desc
+                  .desc_img
+                    img(src='img/i21.png', alt='')
+                  p
+                    | Сайт 
+                    a(href='http://www.labquest.ru/') www.labquest.ru
+            p.copyr ©АО «ЛабКвест». Все права защищены и охраняются законом
+          .pt_left
+          .pt_right
+    // wrapper
+    #footer
+      .container
+        .row
+          .col-xs-12.col-sm-12.col-md-12.col-lg-12
+            p.copyright
+              | Копирование, тиражирование, а равно иное использование материалов, размещенных на сайте 
+              a(href='http://www.labquest.ru/') www.labquest.ru
+              | , возможно только с письменного разрешения Правообладателя. 
+              a(href='docs/Лицензия_на_осуществление_медицинской_деятельности_АО_ЛабКвест.pdf', target='_blank') Лицензия № ЛО-77-01-013785 от 19.01.2017
+              | .
+            p.developer
+              | Креативное агентство — 
+              a(href='http://www.liqium.ru/', target='_blank') Liqium
+    // footer
+    #hot_line.hides.win_popup
+      .line_pp
+        h3 Горячая линия
+        p
+          | Получите консультацию врачей лаборатории по назначению и интерпретации результатов лабораторных исследований
+      .blc_pp_wt
+        form.hot_ln(action='#', method='post')
+          .pp_in.name_med
+            span
+              | Наименование медицинского учреждения 
+              i *
+            input.ptt(type='text', name='medical_institution', required='')
+          .pp_in.pp_name
+            span
+              | Ваше имя 
+              i *
+            input.ptt(type='text', name='firstname', required='')
+          .clearfix.tw_pp
+            .pp_in
+              span Телефон
+              input.phone.ptt(type='text')
+            .pp_in
+              span
+                | E-mail 
+                i *
+              input.email(type='text', name='mail', required='')
+          .blc_tstar
+            span
+              | Сообщение 
+              i *
+            textarea.ptt(name='txt')
+          .blc_check_results
+            p.pp_notis
+              i *
+              |  Обязательные поля для заполнения
+            button.get_go Отправить
+    #visit_lab.hides.win_popup
+      .line_pp
+        h3 Посетить лабораторию
+        p Оформить заявку на индивидуальный или коллегиальный лабораторный тур
+      .blc_pp_wt
+        form.vsl(action='#', method='post')
+          .pp_in.name_med
+            span
+              | Наименование медицинского учреждения 
+              i *
+            input.ptt(type='text', name='medical_institution', required='')
+          .pp_in.pp_name
+            span
+              | Ваше имя 
+              i *
+            input.ptt(type='text', name='firstname', required='')
+          .clearfix.tw_pp
+            .pp_in
+              span Телефон
+              input.phone.ptt(type='text')
+            .pp_in
+              span
+                | E-mail 
+                i *
+              input.email(type='text', name='mail')
+          .blc_tstar
+            span
+              | Сообщение 
+              i *
+            textarea.ptt(name='txt')
+          .blc_check_results
+            p.pp_notis
+              i *
+              |  Обязательные поля для заполнения
+            button.get_go Отправить
+    #enter_contract.hides.win_popup
+      .line_pp
+        h3 Заключить договор
+        p
+          | Оформить обращение на разработку индивидуального плана лабораторного обслуживания и ценового предложения
+      .blc_pp_wt
+        form.enc(action='#', method='post')
+          .pp_in.name_med
+            span
+              | Наименование медицинского учреждения 
+              i *
+            input.ptt(type='text', name='medical_institution', required='')
+          .pp_in.pp_name
+            span
+              | Ваше имя 
+              i *
+            input.ptt(type='text', name='firstname', required='')
+          .clearfix.tw_pp
+            .pp_in
+              span Телефон
+              input.phone.ptt(type='text')
+            .pp_in
+              span
+                | E-mail 
+                i *
+              input.email(type='text', name='mail')
+          .blc_tstar
+            span
+              | Сообщение 
+              i *
+            textarea.ptt(name='txt')
+          .blc_check_results
+            p.pp_notis
+              i *
+              |  Обязательные поля для заполнения
+            button.get_go Отправить
+    #job_seekers.hides.win_popup
+      .line_pp
+        h3 Для соискателей вакансии
+        p
+          | Подать заявку на замещение вакантных должностей для медицинского и административного персонала
+      .blc_pp_wt
+        form#upload.jbs(action='#', method='post')
+          .pp_in.pp_name
+            span
+              | Ваше имя 
+              i *
+            input.ptt(type='text', name='firstname', required='')
+          .clearfix.tw_pp
+            .pp_in
+              span Телефон
+              input.phone.ptt(type='text')
+            .pp_in
+              span
+                | E-mail 
+                i *
+              input.email(type='text', name='mail', required='')
+          .blc_tstar
+            span
+              | Комменатрий 
+              i *
+            textarea.ptt(name='txt', required='')
+          .blc_fole_upl
+            #drop.clearfix
+              a.dwn Прикрепить резюме
+              input.mulip(type='file', name='upl', multiple='')
+            ul.clearfix.list_dwn
+              // The file uploads will be shown here
+          .i_agree
+            input#checkboxG1.css-checkbox(type='checkbox', name='checkboxG1')
+            label.css-label(for='checkboxG1')
+              | Я согласен(а) на обработку 
+              a(href='docs/consent_to_personal_data_processing.pdf', target='_blank') предоставленных мною персональных данных
+          .clearfix.blc_check_results
+            p.pp_notis
+              i *
+              |  Обязательные поля для заполнения
+            button.get_go Отправить
+    #thank_you.hides.win_popup
+      .line_pp
+        h3 Спасибо!
+      .blc_pp_wt
+        p Ваше обращение успешно отправлено
+        span и его уже рассматривают специалисты лабораторииh1 Index page

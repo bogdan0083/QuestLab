@@ -1,0 +1,120 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-arw_left_g {
+  background-image: url(sprite.png);
+  background-position: -434px -65px;
+  width: 38px;
+  height: 15px;
+}
+.icon-arw_left_g_black {
+  background-image: url(sprite.png);
+  background-position: -434px -195px;
+  width: 38px;
+  height: 15px;
+}
+.icon-arw_left_g_green {
+  background-image: url(sprite.png);
+  background-position: -434px -130px;
+  width: 38px;
+  height: 15px;
+}
+.icon-arw_right_g {
+  background-image: url(sprite.png);
+  background-position: -210px -306px;
+  width: 38px;
+  height: 15px;
+}
+.icon-arw_right_g_black {
+  background-image: url(sprite.png);
+  background-position: -298px -306px;
+  width: 38px;
+  height: 15px;
+}
+.icon-arw_right_g_green {
+  background-image: url(sprite.png);
+  background-position: -434px 0px;
+  width: 38px;
+  height: 15px;
+}
+.icon-i22 {
+  background-image: url(sprite.png);
+  background-position: -434px -335px;
+  width: 19px;
+  height: 25px;
+}
+.icon-i22g {
+  background-image: url(sprite.png);
+  background-position: -434px -260px;
+  width: 19px;
+  height: 25px;
+}
+.icon-i22greens {
+  background-image: url(sprite.png);
+  background-position: -522px -72px;
+  width: 17px;
+  height: 22px;
+}
+.icon-i22gs {
+  background-image: url(sprite.png);
+  background-position: -522px 0px;
+  width: 17px;
+  height: 22px;
+}
+.icon-i3 {
+  background-image: url(sprite.png);
+  background-position: -105px -306px;
+  width: 55px;
+  height: 55px;
+}
+.icon-i3h {
+  background-image: url(sprite.png);
+  background-position: 0px -306px;
+  width: 55px;
+  height: 55px;
+}
+.icon-pclose {
+  background-image: url(sprite.png);
+  background-position: -144px -411px;
+  width: 18px;
+  height: 18px;
+}
+.icon-pclose_h {
+  background-image: url(sprite.png);
+  background-position: -212px -411px;
+  width: 18px;
+  height: 18px;
+}
+.icon-s {
+  background-image: url(sprite.png);
+  background-position: 0px -411px;
+  width: 22px;
+  height: 21px;
+}
+.icon-sh {
+  background-image: url(sprite.png);
+  background-position: -72px -411px;
+  width: 22px;
+  height: 21px;
+}
+.icon-sprite {
+  background-image: url(sprite.png);
+  background-position: 0px 0px;
+  width: 384px;
+  height: 256px;
+}
