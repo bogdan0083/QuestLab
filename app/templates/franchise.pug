@@ -2,6 +2,10 @@
 extends layouts/_layout
 block head
   - var title = 'Main page'
+  - var headerTransparent = true
+  - var activeMenu = 4
+  - var headerEmpty = true
+  - var footerEmpty = true
 block content
     // start franchise-promo
     .franchise-promo 
@@ -75,6 +79,46 @@ block content
           // end swiper-slide
         .swiper-pagination
     // end franchise-promo
+    // start franchise-unique
+    .franchise-unique
+      h2.section-heading Уникальность бизнесс-концепции
+      .container
+        .row
+          .franchise-unique-circle(data-aos="fade-up" data-aos-duration="1000" data-aos-anchor=".franchise-unique")
+            .inner
+              .icon-mark-map
+              h3.lined Революционная
+              p концепция для бизнеса #[br] и пациентов
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4(data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" data-aos-anchor=".franchise-unique")
+            .franchise-unique-item.lined
+              .circle
+                span 1
+              h5 Модель франшизы LabQuest 
+              p не является типичной для рынка лабораторной диагностики
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4.col-md-offset-4.col-lg-offset-4(data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1200" data-aos-anchor=".franchise-unique")
+            .franchise-unique-item.lined
+              .circle
+                span 2
+              h5 Франшиза LabQuest —
+              p это проект со стабильной доходностью и широким набором услуг
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4(data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1800" data-aos-anchor=".franchise-unique")
+            .franchise-unique-item
+              .circle
+                span 3
+              h5 Мы единственные в России,
+              p кто создает розничную сеть медицинских офисов по лабораторной диагностике Premium формата
+          .col-xs-12.col-sm-6.col-md-4.col-lg-4.col-md-offset-4.col-lg-offset-4(data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2400" data-aos-anchor=".franchise-unique")
+            .franchise-unique-item
+              .circle
+                span 4
+              h5 Франшиза объединяет
+              p
+                | бренд LabQuest и суббренды Doctor Q,
+                br 
+                | LabQuest microbiology и LabQuest
+                br 
+                | histology
+    // end franchise-unique
     // start d3_tur
     .d3_tur.d3_tur-secondary
       .container
@@ -153,12 +197,61 @@ block content
         .franchise-step.step1(style="background-image: url(img/step-bg1.jpg)")
           .inner
             .franchise-step-top
-              .num 1
-              .content Откройте для себя #[br] LabQuest
+              .top-wrap
+                .num.num-1 1
+                .content Откройте для себя #[br] LabQuest
             .franchise-step-content
               p На ней претенденту может быть предоставлена финансовая информация, идет более конкретный разговор о перспективах и условиях сотрудничества. Для получения доступа к этим сведениям, у вас могут попросить подписать соглашение о неразглашении
             .franchise-step-bottom
-              a.btn Узнать все этапы
+              a.button.button-white(href="#") Узнать все этапы
+        // end franchise-step
+        // start franchise-step
+        .franchise-step.step2(style="background-image: url(img/step-bg2.jpg)")
+          .inner
+            .franchise-step-top
+              .top-wrap
+                .num 2
+                .content Заполните #[br] анкету
+            .franchise-step-content
+              p На ней претенденту может быть предоставлена финансовая информация, идет более конкретный разговор о перспективах и условиях сотрудничества. Для получения доступа к этим сведениям, у вас могут попросить подписать соглашение о неразглашении
+            .franchise-step-bottom
+              a.button.button-white(href="#") Узнать все этапы
+        // end franchise-step
+        // start franchise-step
+        .franchise-step.step3(style="background-image: url(img/step-bg3.jpg)")
+          .inner
+            .franchise-step-top
+              .top-wrap
+                .num 3
+                .content Задайте вопросы #[br] менеджеру франчайзера
+            .franchise-step-content
+              p На ней претенденту может быть предоставлена финансовая информация, идет более конкретный разговор о перспективах и условиях сотрудничества. Для получения доступа к этим сведениям, у вас могут попросить подписать соглашение о неразглашении
+            .franchise-step-bottom
+              a.button.button-white(href="#") Узнать все этапы
+        // end franchise-step
+        // start franchise-step
+        .franchise-step.step4(style="background-image: url(img/step-bg4.jpg)")
+          .inner
+            .franchise-step-top
+              .top-wrap
+                .num 4
+                .content Первая встреча #[br] с франчайзером
+            .franchise-step-content
+              p На ней претенденту может быть предоставлена финансовая информация, идет более конкретный разговор о перспективах и условиях сотрудничества. Для получения доступа к этим сведениям, у вас могут попросить подписать соглашение о неразглашении
+            .franchise-step-bottom
+              a.button.button-white(href="#") Узнать все этапы
+        // end franchise-step
+        // start franchise-step
+        .franchise-step.step5(style="background-image: url(img/step-bg5.jpg)")
+          .inner
+            .franchise-step-top
+              .top-wrap
+                .num 5
+                .content Посетите  лабораторию #[br] и флагманский офис
+            .franchise-step-content
+              p На ней претенденту может быть предоставлена финансовая информация, идет более конкретный разговор о перспективах и условиях сотрудничества. Для получения доступа к этим сведениям, у вас могут попросить подписать соглашение о неразглашении
+            .franchise-step-bottom
+              a.button.button-white(href="#") Узнать все этапы
         // end franchise-step
     // end franchise-steps
     // start franchise-priveleges
@@ -167,44 +260,47 @@ block content
         h2.section-heading Привилегии для инвесторов
         .group
           .row
-            .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
-                .circle
-                  .icon-check-large
-                h4 Эксклюзивный географический статус
+                .circle(data-aos="fade-up")
+                  .icon.icon-check-large
+                h4.lined Эксклюзивный #[br] географический статус
                 p LabQuest только выходит на рынок диагностических услуг. Инвесторы не ограничены в выборе территории для ведения бизнеса
-            .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
-                .circle
-                  .icon-check-large
-                h4 Единый центр снабжения 
+                .circle(data-aos="fade-up")
+                  .icon.icon-check-large
+                h4.lined Единый центр #[br] снабжения 
                 p LabQuest использует систему централизованного снабжения расходными материалами, элементами оформления медицинского офиса обеспечения франчайзи полиграфической и рекламной продукцией и т. д.
-            .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
-                .circle
-                  .icon-check-large
-                h4 Несколько потоков доходов франчайзи
+                .circle(data-aos="fade-up")
+                  .icon.icon-check-large
+                h4.lined Несколько потоков #[br] доходов франчайзи
                 ul.custom-list
-                  li #[span.dot ·] продажа лабораторных исследований
-                  li #[span.dot ·] процедура взятия биоматериала
-                  li #[span.dot ·] дополнительные мед. услуги и др.
-            .col-xs-12.col-sm-6.col-md-4.col-lg-4
+                  li 
+                    span продажа лабораторных исследований
+                  li 
+                    span процедура взятия биоматериала
+                  li 
+                    span дополнительные мед. услуги и др.
+            .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
-                .circle
-                  .icon-check-large
-                h4 Новые возможности на рынке лабораторной диагностики
-                p Бизнес-идеи, основанные на особенностяхнациональных культур и религий 
-            .col-xs-12.col-sm-6.col-md-4.col-lg-4
+                .circle(data-aos="fade-up")
+                  .icon.icon-check-large
+                h4.lined Новые возможности на рынке лабораторной диагностики
+                p Бизнес-идеи, основанные на особенностях национальных культур и религий 
+            .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
-                .circle
-                  .icon-check-large
-                h4 Преемственность бизнеса
+                .circle(data-aos="fade-up")
+                  .icon.icon-check-large
+                h4.lined Преемственность #[br] бизнеса
                 p Долгосрочный успех. Бизнес для обеспечения благополучной жизни близких. Бизнес, которым можно гордиться
-            .col-xs-12.col-sm-6.col-md-4.col-lg-4
+            .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
-                .circle
-                  .icon-check-large
-                h4 Неограниченный финансовый потенциал
+                .circle(data-aos="fade-up")
+                  .icon.icon-check-large
+                h4.lined Неограниченный #[br] финансовый потенциал
                 p Партнеры компании строят бизнес в процветающей отрасли
     // end franchise-priveleges
     // start business-features
@@ -212,190 +308,22 @@ block content
       h2.section-heading Привилегии для инвесторов
       .container
         .row
-          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6
             .business-feature
-              h3 Монотерриториальные франчайзи
+              h3.lined Монотерриториальные франчайзи
               p Приобретение одной франшизы. #[br] Развитие бренда локально
-          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6
             .business-feature
-              h3 Политерриториальные франчайзи
+              h3.lined Политерриториальные франчайзи
               p Приобретение нескольких франшиз (постепенно) для ведения бизнеса и управления всеми франчайзинговыми медицинскими офисами самостоятельно или через наемного менеджера
-          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6
             .business-feature
-              h3 Дивизиональный менеджмент
+              h3.lined Дивизиональный менеджмент
               p Мастер-франшиза на страну/регион. #[br] Для тех, кто заинтересован в развитии бренда на широком уровне. Региональная и межрегиональная экспансия. 
               p Самостоятельное привлечение франчайзи, предоставление им постоянной поддержки и обучения при содействии со стороны франчайзера LabQuest
-          .col-xs-12.col-sm-6.col-md-6.col-lg-6
+          .col-xs-12.col-sm-12.col-md-6.col-lg-6
             .business-feature
-              h3 Политерриториальные франчайзи
+              h3.lined Политерриториальные франчайзи
               p Франшиза предоставляется только одному франчайзи с перспективами развития конкретной территории и с определенным количеством франчайзинговых точек (для исключения возможности работы на данной территории другого франчайзи)
     // end business-features
-    #footer
-      .container
-        .row
-          .col-xs-12.col-sm-12.col-md-12.col-lg-12
-            p.copyright
-              | Копирование, тиражирование, а равно иное использование материалов, размещенных на сайте 
-              a(href='http://www.labquest.ru/') www.labquest.ru
-              | , возможно только с письменного разрешения Правообладателя. 
-              a(href='docs/Лицензия_на_осуществление_медицинской_деятельности_АО_ЛабКвест.pdf', target='_blank') Лицензия № ЛО-77-01-013785 от 19.01.2017
-              | .
-            p.developer
-              | Креативное агентство — 
-              a(href='http://www.liqium.ru/', target='_blank') Liqium
-    // footer
-    #hot_line.hides.win_popup
-      .line_pp
-        h3 Горячая линия
-        p
-          | Получите консультацию врачей лаборатории по назначению и интерпретации результатов лабораторных исследований
-      .blc_pp_wt
-        form.hot_ln(action='#', method='post')
-          .pp_in.name_med
-            span
-              | Наименование медицинского учреждения 
-              i *
-            input.ptt(type='text', name='medical_institution', required='')
-          .pp_in.pp_name
-            span
-              | Ваше имя 
-              i *
-            input.ptt(type='text', name='firstname', required='')
-          .clearfix.tw_pp
-            .pp_in
-              span Телефон
-              input.phone.ptt(type='text')
-            .pp_in
-              span
-                | E-mail 
-                i *
-              input.email(type='text', name='mail', required='')
-          .blc_tstar
-            span
-              | Сообщение 
-              i *
-            textarea.ptt(name='txt')
-          .blc_check_results
-            p.pp_notis
-              i *
-              |  Обязательные поля для заполнения
-            button.get_go Отправить
-    #visit_lab.hides.win_popup
-      .line_pp
-        h3 Посетить лабораторию
-        p Оформить заявку на индивидуальный или коллегиальный лабораторный тур
-      .blc_pp_wt
-        form.vsl(action='#', method='post')
-          .pp_in.name_med
-            span
-              | Наименование медицинского учреждения 
-              i *
-            input.ptt(type='text', name='medical_institution', required='')
-          .pp_in.pp_name
-            span
-              | Ваше имя 
-              i *
-            input.ptt(type='text', name='firstname', required='')
-          .clearfix.tw_pp
-            .pp_in
-              span Телефон
-              input.phone.ptt(type='text')
-            .pp_in
-              span
-                | E-mail 
-                i *
-              input.email(type='text', name='mail')
-          .blc_tstar
-            span
-              | Сообщение 
-              i *
-            textarea.ptt(name='txt')
-          .blc_check_results
-            p.pp_notis
-              i *
-              |  Обязательные поля для заполнения
-            button.get_go Отправить
-    #enter_contract.hides.win_popup
-      .line_pp
-        h3 Заключить договор
-        p
-          | Оформить обращение на разработку индивидуального плана лабораторного обслуживания и ценового предложения
-      .blc_pp_wt
-        form.enc(action='#', method='post')
-          .pp_in.name_med
-            span
-              | Наименование медицинского учреждения 
-              i *
-            input.ptt(type='text', name='medical_institution', required='')
-          .pp_in.pp_name
-            span
-              | Ваше имя 
-              i *
-            input.ptt(type='text', name='firstname', required='')
-          .clearfix.tw_pp
-            .pp_in
-              span Телефон
-              input.phone.ptt(type='text')
-            .pp_in
-              span
-                | E-mail 
-                i *
-              input.email(type='text', name='mail')
-          .blc_tstar
-            span
-              | Сообщение 
-              i *
-            textarea.ptt(name='txt')
-          .blc_check_results
-            p.pp_notis
-              i *
-              |  Обязательные поля для заполнения
-            button.get_go Отправить
-    #job_seekers.hides.win_popup
-      .line_pp
-        h3 Для соискателей вакансии
-        p
-          | Подать заявку на замещение вакантных должностей для медицинского и административного персонала
-      .blc_pp_wt
-        form#upload.jbs(action='#', method='post')
-          .pp_in.pp_name
-            span
-              | Ваше имя 
-              i *
-            input.ptt(type='text', name='firstname', required='')
-          .clearfix.tw_pp
-            .pp_in
-              span Телефон
-              input.phone.ptt(type='text')
-            .pp_in
-              span
-                | E-mail 
-                i *
-              input.email(type='text', name='mail', required='')
-          .blc_tstar
-            span
-              | Комменатрий 
-              i *
-            textarea.ptt(name='txt', required='')
-          .blc_fole_upl
-            #drop.clearfix
-              a.dwn Прикрепить резюме
-              input.mulip(type='file', name='upl', multiple='')
-            ul.clearfix.list_dwn
-              // The file uploads will be shown here
-          .i_agree
-            input#checkboxG1.css-checkbox(type='checkbox', name='checkboxG1')
-            label.css-label(for='checkboxG1')
-              | Я согласен(а) на обработку 
-              a(href='docs/consent_to_personal_data_processing.pdf', target='_blank') предоставленных мною персональных данных
-          .clearfix.blc_check_results
-            p.pp_notis
-              i *
-              |  Обязательные поля для заполнения
-            button.get_go Отправить
-    #thank_you.hides.win_popup
-      .line_pp
-        h3 Спасибо!
-      .blc_pp_wt
-        p Ваше обращение успешно отправлено
-        span и его уже рассматривают специалисты лабораторииh1 Index page
+    include partials/_popups.pug

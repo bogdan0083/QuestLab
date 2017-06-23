@@ -34,7 +34,11 @@ const prettify = require("gulp-html-prettify");
 
 // Postcss plugins
 const plugins = [
-  mqpacker({}),
+  // mqpacker({
+  //   sort: function (a, b) {
+  //     return b - a;
+  //   }
+  // }),
   autoprefixer({
     browsers: ['> 5%', 'last 2 versions', 'Firefox ESR']
   })

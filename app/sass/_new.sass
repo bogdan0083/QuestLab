@@ -1,4 +1,5 @@
 // TODO: make 4 spaces in html instead of 2
+// TODO: фикс мобильной шапки
 // Надо сказать прогеру, чтобы обновил libs.min.js, custom.js и styles.css
 
 // variables
@@ -15,11 +16,22 @@ $color-green-secondary: #ccdc45
 
 body
   overflow-x: hidden
+  position: relative
 
 .icon-check
   width: 11px
   height: 10px
   background-image: url(../img/check.png)
+
+.icon-mark-map
+  width: 94px
+  height: 59px
+  background-image: url(../img/mark-map.png)
+
+.icon-check-large
+  width: 24px
+  height: 15px
+  background-image: url(../img/check-big.png)
 
 .section-heading
   max-width: 1200px
@@ -27,9 +39,23 @@ body
   text-align: center
   +r($screen-sm)
     margin-bottom: 30px
-    font-size: 24px
-  +r($screen-xs)
-    font-size: 19px
+    font-size: 30px
+
+.custom-list
+  li
+    margin: 4px 0
+  span
+    display: inline-block
+    &:before
+      content: ''
+      width: 5px
+      height: 5px
+      background-color: $color-green-secondary
+      margin-right: 10px
+      display: inline-block
+      vertical-align: middle
+      position: relative
+      top: -2px
 
 .lined
   position: relative
@@ -46,6 +72,7 @@ body
 /* NEW STYLES START */
 .button
   text-decoration: none
+  text-align: center
   display: inline-block
   width: 240px
   height: 54px
@@ -69,14 +96,91 @@ body
     color: #fff
     svg path
       fill: $color-green-secondary
-
+  &-white
+    color: white
+    border-color: white
   &-gray
     border-color: #a0a6ac
 
 .hdr_top
+  &_in
+    +tr()
   .hdr_top_in_transparent
     background: rgba(white, 0.6)
+  &_full
+    .select_office,
+    .hdr_right .hdr_rght_top .hdr_search
+      display: block
 
+.main-nav
+  border-top: 1px solid #dadad7
+  border-bottom: 1px solid #e5d8c7
+  clear: both
+  .container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    width: 100%
+    // justify-content: space-between
+    align-content: stretch
+    max-width: 1210px
+    +r($screen-md)
+      flex-wrap: wrap
+  a
+    font-size: 14px
+    text-transform: uppercase
+    display: block
+    text-align: center
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 10px
+    padding-bottom: 10px
+    color: #0b1c2b
+    position: relative
+    flex-grow: 1
+    +r($screen-lg)
+      font-size: 13px
+    +tr()
+    &:hover, &.active
+      text-decoration: none
+      color: #a3b205
+      &:before
+        opacity: 1
+        width: 100%
+    &:after
+      content: ''
+      right: 0
+      top: 50%
+      background-color: #d8d5d1
+      width: 1px
+      height: 18px
+      margin-top: -9px
+      position: absolute
+    &:before
+      content: ''
+      left: 50%
+      bottom: 0
+      background-color: #d8d5d1
+      width: 1px
+      opacity: 0
+      height: 2px
+      margin-top: -9px
+      position: absolute
+      background-color: #ccdb2a
+      transform: translateX(-50%)
+      +tr()
+    &:last-child
+      &:after
+        display: none
+#hdr_ti_adp
+  .main-nav
+    align-items: center
+    display: none
+    a
+      width: 50%
+      vertical-align: middle
+      &:after
+        display: none
 .swiper-container-horizontal
   > .swiper-pagination-bullets
     bottom: 40px
@@ -86,9 +190,9 @@ body
   z-index: 20
 
 .swiper-pagination-bullet
-  width: 12px
-  height: 12px
-  border: 3px solid #9fa1ab
+  width: 11px
+  height: 11px
+  border: 2px solid #9fa1ab
   background-color: transparent
   padding: 0
   opacity: 1
@@ -103,7 +207,7 @@ body
     top: 50%
     right: -13px
     background-color: #9fa1ab
-    width: 10px
+    width: 12px
     margin-top: -1px
     height: 2px
   &-active
@@ -284,13 +388,99 @@ body
     transform: none
 /* end franchise-promo */
 
+/* start franchise-unique */
+.franchise-unique
+  text-align: center
+  padding: 60px 0 80px
+  +r($screen-sm)
+    padding-bottom: 40px
+  .container
+    max-width: 1400px
+    position: relative
+  &-item
+    max-width: 330px
+    margin: 30px auto
+    padding-bottom: 40px
+    .circle
+      border-color: rgba(#0b1c2b, 0.35)
+      width: 53px
+      height: 53px
+      margin-bottom: 20px
+      span
+        display: block
+        height: 53px
+        line-height: 50px
+    h5
+      font-size: 18px
+      font-weight: 400
+      margin-bottom: 4px
+  &-circle
+    width: 407px
+    height: 407px
+    margin: 0 auto
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+    background: url(../img/circle-large.png) no-repeat center / 100% 100%
+    position: absolute
+    left: 50%
+    top: 30px
+    margin-left: -204px
+    +r($screen-md)
+      position: relative
+      margin-left: auto
+      left: auto
+      top: auto
+      margin-bottom: 120px
+    +r($screen-sm)
+      margin-bottom: 20px
+    &:after
+      content: ''
+      width: 20px
+      height: 108px
+      background-image: url(../img/arr-green-down.png)
+      background-position: 0 center
+      left: 50%
+      margin-left: -9px
+      top: 407px
+      position: absolute
+      opacity: 0
+      height: 1px
+      +tr(all 1s 3s)
+      +r($screen-sm)
+        display: none
+    &.aos-animate:after
+      opacity: 1
+      height: 108px
+    .inner
+      width: 100%
+    .lined
+      padding-bottom: 10px
+      margin-bottom: 14px
+      font-size: 36px
+      &:after
+        width: 124px
+        margin-left: -67px
+      +r($screen-xs)
+        font-size: 26px
+    .icon-mark-map
+      margin: 0 auto 30px
+      +r($screen-xs)
+        margin-bottom: 10px
+    +r($screen-xs)
+      width: 300px
+      height: 300px
+      margin-bottom: 60px
+
+/* end franchise-unique */
 .d3_tur
   .container
     position: static
   &-secondary
     .crc_lines
       .crc_ln2
-        height: 2px
+        height: 3px
         right: -2000px
         width: 0
         top: 0
@@ -299,6 +489,8 @@ body
 .formats
   text-align: center
   padding-top: 60px
+  position: relative
+  overflow: hidden
   +r($screen-sm)
     padding-top: 40px
   .container
@@ -476,7 +668,10 @@ body
     background-size: cover
     background-position: center
     position: relative
-    &:before
+    padding-top: 240px
+    +r(1700px)
+      padding-left: 0
+    &:before, &:after
       content: ''
       position: absolute
       left: 0
@@ -484,9 +679,259 @@ body
       width: 100%
       height: 100%
       background-color: #9bb9dd
-      opacity: .4
+      opacity: .8
+      +tr()
+    &:after
+      opacity: 0
+      background-color: #091e35
     .inner
       position: relative
       z-index: 1
+      height: 100%
+    &-content
+      font-size: 18px
+      line-height: 1.5
+      color: #fff
+      opacity: 0
+      transform: translateY(40px)
+      padding-right: 20px
+      padding-left: 30px
+      +tr()
+      +r(1700px)
+        padding-left: 10px
+        padding-right: 10px
+        p
+          font-size: 15px
+      p
+        color: inherit
+    &-top
+      position: absolute
+      left: -6px
+      width: 100%
+      top: 400px
+      padding-left: 26px
+      padding-right: 10px
+      +tr(all 0.8s)
+      .top-wrap
+        display: inline-block
+        text-align: left
+      +r(1700px)
+        text-align: center
+        top: 370px
+        left: 0
+        .content
+          font-size: 14px
+      +r($screen-lg)
+        top: 260px
+      &:after
+        content: ''
+        width: 240px
+        height: 1px
+        opacity: .15
+        background-color: #d6d6d6
+        bottom: -30px
+        left: 50%
+        position: absolute
+        width: 70%
+        left: 50%
+        transform: translateX(-50%)
+      .num
+        float: left
+        font-size: 76px
+        font-weight: 500
+        color: #fff
+        line-height: 0.8
+        margin-right: 20px
+        +r(1700px)
+          font-size: 60px
+          margin-top: 12px
+        &:after
+          content: ''
+          width: 6px
+          height: 6px
+          display: inline-block
+          vertical-align: bottom
+          background-color: #ccdb2a
+          margin-left: 0
+          margin-right: -6px
+        &-1
+          &:after
+            margin-left: -4px
+      .content
+        overflow: hidden
+        font-size: 16px
+        line-height: 1.5
+        text-transform: uppercase
+        font-weight: 400
+        padding-top: 14px
+        padding-left: 20px
+        position: relative
+        +tr()
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 16px
+          width: 1px
+          height: 46px
+          opacity: .8
+          background-color: #fff
+          +tr()
+    .button
+      border-width: 3px
+      max-width: 238px
+      width: 100%
+      display: block
+      margin: 0 auto
+      line-height: 48px
+      font-size: 15px
+    &-bottom
+      position: absolute
+      bottom: 40px
+      width: 100%
+      padding-left: 10px
+      padding-right: 10px
+      left: 0
+      opacity: 0
+      transform: translateY(60px)
+      +tr()
+    &:hover
+      .franchise-step-top
+        transform: translateY(-540px)
+        +r($screen-lg)
+          transform: translateY(-400px)
+        .content
+          color: #ccdb2a
+      .franchise-step-content
+        +tr(all 0.6s 0.6s)
+        opacity: 1
+        transform: none
+      .franchise-step-bottom
+        +tr(all 0.6s 0.8s)
+        opacity: 1
+        transform: none
+      &:after
+        opacity: 0.7
+    +r($screen-lg)
+      width: 33.333%
+      height: 600px
+    +r($screen-md)
+      width: 50%
+      padding-top: 40px
+      height: auto
+      padding-bottom: 0
+      .inner
+        padding-bottom: 140px
+      .franchise-step-top
+        position: relative
+        left: 0
+        top: 0
+      &:hover
+        .franchise-step-top
+          transform: none
+      .franchise-step-top
+        margin-bottom: 60px
+        .content
+          color: #ccdb2a
+      .franchise-step-content
+        +tr(all 0.6s 0.6s)
+        opacity: 1
+        transform: none
+      .franchise-step-bottom
+        +tr(all 0.6s 0.8s)
+        opacity: 1
+        transform: none
+      &:after
+        opacity: 0.7
+    +r(600px)
+      width: 100%
 
 /* end franchise-steps */
+
+.franchise-priveleges
+  padding: 60px 0
+  .container
+    max-width: 1400px
+  .circle
+    width: 85px
+    height: 85px
+    border-color: #ccdb2a
+  .row > div:nth-child(3n+4)
+    clear: left
+    +r($screen-md)
+      clear: none
+  .row > div:nth-child(2n+1)
+    +r($screen-md)
+      clear: left
+
+.franchise-privelege
+  text-align: center
+  max-width: 410px
+  margin: 30px auto
+  .circle
+    margin-bottom: 14px
+  h4
+    font-weight: 400
+    text-transform: uppercase
+    font-family: "DINPro"
+    line-height: 1.5
+    padding-bottom: 20px
+    margin-bottom: 26px
+    &:after
+      width: 160px
+      margin-left: -80px
+
+/* start business-features */
+.business-features
+  background-color: #f3f5f8
+  padding: 60px 0 40px
+  .container
+    max-width: 1400px
+  .row
+    > div:nth-child(3)
+      margin-top: -50px
+      +r($screen-md)
+        margin-top: 0
+
+.business-feature
+  padding-left: 100px
+  margin: 40px auto
+  max-width: 560px
+  .lined
+    padding-bottom: 26px
+    margin-bottom: 30px
+    color: #acbc07
+    font-size: 34px
+    max-width: 400px
+    line-height: 1.14
+    &:before
+      content: ''
+      width: 7px
+      height: 7px
+      left: -24px
+      top: 18px
+      position: absolute
+      background-color: #ccdb2a
+      border-radius: 50%
+    &:after
+      left: 0
+      margin-left: 0
+    +r($screen-sm)
+      font-size: 27px
+      margin-left: auto
+      margin-right: auto
+      &:before
+        display: none
+      &:after
+        left: 50%
+        margin-left: -106px
+  p
+    font-size: 18px
+    line-height: 1.5
+    color: #202020
+    opacity: 0.8
+  +r($screen-sm)
+    margin-bottom: 40px
+    padding-left: 0
+    text-align: center
+/* end business-features */

@@ -1,0 +1,157 @@
+// start popups
+#hot_line.hides.win_popup
+  .line_pp
+    h3 Горячая линия
+    p
+      | Получите консультацию врачей лаборатории по назначению и интерпретации результатов лабораторных исследований
+  .blc_pp_wt
+    form.hot_ln(action='#', method='post')
+      .pp_in.name_med
+        span
+          | Наименование медицинского учреждения 
+          i *
+        input.ptt(type='text', name='medical_institution', required='')
+      .pp_in.pp_name
+        span
+          | Ваше имя 
+          i *
+        input.ptt(type='text', name='firstname', required='')
+      .clearfix.tw_pp
+        .pp_in
+          span Телефон
+          input.phone.ptt(type='text')
+        .pp_in
+          span
+            | E-mail 
+            i *
+          input.email(type='text', name='mail', required='')
+      .blc_tstar
+        span
+          | Сообщение 
+          i *
+        textarea.ptt(name='txt')
+      .blc_check_results
+        p.pp_notis
+          i *
+          |  Обязательные поля для заполнения
+        button.get_go Отправить
+#visit_lab.hides.win_popup
+  .line_pp
+    h3 Посетить лабораторию
+    p Оформить заявку на индивидуальный или коллегиальный лабораторный тур
+  .blc_pp_wt
+    form.vsl(action='#', method='post')
+      .pp_in.name_med
+        span
+          | Наименование медицинского учреждения 
+          i *
+        input.ptt(type='text', name='medical_institution', required='')
+      .pp_in.pp_name
+        span
+          | Ваше имя 
+          i *
+        input.ptt(type='text', name='firstname', required='')
+      .clearfix.tw_pp
+        .pp_in
+          span Телефон
+          input.phone.ptt(type='text')
+        .pp_in
+          span
+            | E-mail 
+            i *
+          input.email(type='text', name='mail')
+      .blc_tstar
+        span
+          | Сообщение 
+          i *
+        textarea.ptt(name='txt')
+      .blc_check_results
+        p.pp_notis
+          i *
+          |  Обязательные поля для заполнения
+        button.get_go Отправить
+#enter_contract.hides.win_popup
+  .line_pp
+    h3 Заключить договор
+    p
+      | Оформить обращение на разработку индивидуального плана лабораторного обслуживания и ценового предложения
+  .blc_pp_wt
+    form.enc(action='#', method='post')
+      .pp_in.name_med
+        span
+          | Наименование медицинского учреждения 
+          i *
+        input.ptt(type='text', name='medical_institution', required='')
+      .pp_in.pp_name
+        span
+          | Ваше имя 
+          i *
+        input.ptt(type='text', name='firstname', required='')
+      .clearfix.tw_pp
+        .pp_in
+          span Телефон
+          input.phone.ptt(type='text')
+        .pp_in
+          span
+            | E-mail 
+            i *
+          input.email(type='text', name='mail')
+      .blc_tstar
+        span
+          | Сообщение 
+          i *
+        textarea.ptt(name='txt')
+      .blc_check_results
+        p.pp_notis
+          i *
+          |  Обязательные поля для заполнения
+        button.get_go Отправить
+#job_seekers.hides.win_popup
+  .line_pp
+    h3 Для соискателей вакансии
+    p
+      | Подать заявку на замещение вакантных должностей для медицинского и административного персонала
+  .blc_pp_wt
+    form#upload.jbs(action='#', method='post')
+      .pp_in.pp_name
+        span
+          | Ваше имя 
+          i *
+        input.ptt(type='text', name='firstname', required='')
+      .clearfix.tw_pp
+        .pp_in
+          span Телефон
+          input.phone.ptt(type='text')
+        .pp_in
+          span
+            | E-mail 
+            i *
+          input.email(type='text', name='mail', required='')
+      .blc_tstar
+        span
+          | Комменатрий 
+          i *
+        textarea.ptt(name='txt', required='')
+      .blc_fole_upl
+        #drop.clearfix
+          a.dwn Прикрепить резюме
+          input.mulip(type='file', name='upl', multiple='')
+        ul.clearfix.list_dwn
+          // The file uploads will be shown here
+      .i_agree
+        input#checkboxG1.css-checkbox(type='checkbox', name='checkboxG1')
+        label.css-label(for='checkboxG1')
+          | Я согласен(а) на обработку 
+          a(href='docs/consent_to_personal_data_processing.pdf', target='_blank') предоставленных мною персональных данных
+      .clearfix.blc_check_results
+        p.pp_notis
+          i *
+          |  Обязательные поля для заполнения
+        button.get_go Отправить
+#thank_you.hides.win_popup
+  .line_pp
+    h3 Спасибо!
+  .blc_pp_wt
+    p Ваше обращение успешно отправлено
+    span и его уже рассматривают специалисты лабораторииh1 Index page
+// end popups
