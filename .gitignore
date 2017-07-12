@@ -30,3 +30,9 @@ nbproject
 _tmp
 node_modules
 bower_components
+docs
+metro-data
+app/docs
+app/metro-data
+dist/docs
+dist/metro-data

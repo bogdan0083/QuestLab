@@ -1,0 +1,147 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Адреса'
+  - var activeMenu = 0
+block content
+  .layout
+    // start adresses
+    section.address-single-page
+      .page-top
+        .container
+          h1.section-heading Адреса и время работы
+      // start banner-slider
+      .banner-slider.swiper-container
+        .swiper-wrapper 
+          .swiper-slide
+            a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+          .swiper-slide
+            a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+          .swiper-slide
+            a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+        .swiper-pagination
+      // end banner-slider
+      // start address-single
+      .address-single 
+        .address-single-top
+          .container
+            h2.heading Медицинский офис «Бережковский»
+            a.back-link-secondary(href="#") Вернуться к списку
+        // start address-single-details
+        .address-single-details
+          .container
+            .address-single-group
+              .address-location 121059, г. Москва, Бережковская наб., д. 20, стр. 13
+              .address-single-metros
+                a.address-metro-link.color-brown(href="#") 
+                  span.dot
+                  span.text Киевская
+                a.address-metro-link.color-blue(href="#")
+                  span.dot
+                  span.text Студенческая
+            a.face-card-link.fancybox(href="#face-card")
+              span Карточка #[br] юридического лица
+            a.print(href="#")
+              span.text Распечатать
+              span.icon-print
+        // end address-single-details
+        // start table-responsive
+        .table-responsive
+          table.custom-table.custom-table-thead-grey
+            thead
+              tr
+                th Вид услуги
+                th пн.
+                th вт.
+                th ср.
+                th чт.
+                th пт.
+                th сб.
+                th вс.
+            tbody
+              tr
+                td Взятие биоматериала
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 8:00-15:00
+                td —
+              tr
+                td Выдача результатов
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 8:00-15:00
+                td —
+              tr
+                td Врач-консультант
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 7:00-17:00
+                td 8:00-15:00
+                td —
+        // end table-responsive
+        // start table-responsive
+        .table-responsive
+          table.custom-table
+            thead
+              tr
+                th(colspan="8") Услуги, предоставляемые по записи
+            tbody
+              tr
+                td(style="width: 352px") УЗИ
+                td(style="width: 133px") 9:00-17:00
+                td(style="width: 133px") —
+                td(style="width: 133px") 9:00-17:00
+                td(style="width: 133px") —
+                td(style="width: 133px") 9:00-17:00
+                td(style="width: 133px") —
+                td(style="width: 82px") —
+        // end table-responsive
+        .address-single-button
+          a.button.button-separate(href="#")
+            span.text Записаться на прием
+            span.icon
+              include data/edit.svg
+        // start address-map
+        .address-single-map 
+        // end address-map
+        section.address-way
+          .container
+            .address-way-top
+              h2.lined Как добраться?
+              .tabs(data-slider=".address-way-slider")
+                a.tab-pane.no-default-style.js-active(href="#")
+                  .circle.circle-human
+                    include data/human.svg
+                  span.text Пешком
+                a.tab-pane.no-default-style(href="#")
+                  .circle.circle-car
+                    include data/car.svg
+                  span.text На автомобиле
+            .address-way-slider.swiper-container
+              .swiper-wrapper
+                .swiper-slide
+                  h4 Пешком
+                  p От ст. м. «Киевская» выход к остановкам общественного транспорта, расположенным рядом с Киевским вокзалом (напротив ТЦ «Европейский»). Маршруты автобуса №  119, 205, 205 к, 320, 394,  791, 902, 91, троллейбуса № 17, 34, 34к, 7 — проезд до остановки «ТЭЦ № 12». Далее пройдите к КПП (Бережковская набережная, д. 20, стр. 19). При предъявлении паспорта получить пропуск на посещение «ЛабКвест». Пройти по территории к строению 13
+                .swiper-slide
+                  h4 На автомобиле
+                  p От ст. м. «Киевская» выход к остановкам общественного транспорта, расположенным рядом с Киевским вокзалом (напротив ТЦ «Европейский»). Маршруты автобуса №  119, 205, 205 к, 320, 394,  791, 902, 91, троллейбуса № 17, 34, 34к, 7 — проезд до остановки «ТЭЦ № 12». Далее пройдите к КПП (Бережковская набережная, д. 20, стр. 19). При предъявлении паспорта получить пропуск на посещение «ЛабКвест». Пройти по территории к строению 13
+            .address-way-gallery
+              a.img-link.fancybox(href="img/gallery1.jpg" data-fancybox-group="group1")
+                img(src="img/gallery1.jpg")
+              a.img-link.fancybox(href="img/gallery2.jpg" data-fancybox-group="group1")
+                img(src="img/gallery2.jpg")
+              a.img-link.fancybox(href="img/gallery3.jpg" data-fancybox-group="group1")
+                img(src="img/gallery3.jpg")
+              a.img-link.fancybox(href="img/gallery1.jpg" data-fancybox-group="group1")
+                img(src="img/gallery4.jpg")
+      // end address-single
+    // end adresses
+  include partials/_popups.pug

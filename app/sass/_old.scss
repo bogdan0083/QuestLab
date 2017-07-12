@@ -289,6 +289,7 @@ h5 {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'DINPro';
   margin: 0px;
 }
 
@@ -964,6 +965,8 @@ a.mbtn:hover {
 
 .mid_list {
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 .mid_list li {
@@ -988,6 +991,12 @@ a.mbtn:hover {
 
 .mid_list li .desc p {
   color: #434445;
+  opacity: 1;
+  transform: none;
+  font-size: 18px;
+  color: #202020;
+  opacity: .9;
+  line-height: 1.4;
 }
 
 @media (max-width: 1350px) {
@@ -2498,11 +2507,6 @@ a.mbtn:hover {
   margin-right: 0;
 }
 
-.news_list li:hover .desc a {
-  pointer-events: none;
-  cursor: default;
-}
-
 .news_list li:hover .desc a .desc_date .date {
   background: #ccdb2a;
   -webkit-transition: all 0.5s;
@@ -2516,9 +2520,8 @@ a.mbtn:hover {
 }
 
 .news_list li .desc a {
-  pointer-events: none;
-  cursor: default;
   display: block;
+  cursor: pointer;
 }
 
 .news_list li .desc a:hover {
@@ -2548,11 +2551,6 @@ a.mbtn:hover {
   transition: all 0.5s;
 }
 
-@media (max-width: 480px) {
-  .news_list li .desc a .desc_date .date {
-    display: none;
-  }
-}
 
 .news_list li .desc a .desc_date .date h3 {
   font: 500 80px/157px 'DINPro';
@@ -2570,7 +2568,7 @@ a.mbtn:hover {
   font: 300 12px/23px 'DINPro';
   text-transform: uppercase;
   color: #9ba2aa;
-  margin: 0 6px 0 0;
+  margin: 4px 10px 0 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -2647,6 +2645,15 @@ a.mbtn:hover {
   transition: all 0.5s;
 }
 
+@media (max-width: 480px) {
+  .news_list li .desc a .desc_date .date {
+    width: 70px;
+    h3 {
+      font-size: 30px;
+    }
+  }
+}
+
 .blc_news_btn {
   text-align: center;
   margin: 80px 0 0;
@@ -2665,6 +2672,7 @@ a.mbtn:hover {
 
 .blc_news_btn a:hover {
   border-color: #0b1c2b;
+  cursor: pointer;
 }
 
 .blc_news_btn a:after {
@@ -3048,7 +3056,7 @@ a.mbtn:hover {
   }
 }
 
-.ftr .fcnt a {
+.ftr .fcnt a:not(.button) {
   font: 300 15px/15px 'DINPro';
   color: #0b1c2b;
   position: relative;
@@ -3067,7 +3075,7 @@ a.mbtn:hover {
   transition: all 0.5s;
 }
 
-.ftr .fcnt a:hover:after {
+.ftr .fcnt a:not(.button):hover:after {
   background: url("../img/folder_contr_green.svg") no-repeat 0 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -3508,7 +3516,7 @@ a.mbtn:hover {
 .win_popup .blc_pp_wt .blc_check_results button {
   font: normal 16px/22px 'DINPro';
   border: 1px solid #9da4aa;
-  padding: 15px 80px;
+  padding: 14px 80px 16px;
   cursor: pointer;
   color: #0b1c2b;
   background: transparent;
@@ -3602,6 +3610,7 @@ a.mbtn:hover {
   font: normal 16px/16px 'DINPro';
   color: #0a365c;
   text-decoration: none;
+  cursor: pointer;
   cursor: pointer;
   padding: 0 0 0 30px;
 }

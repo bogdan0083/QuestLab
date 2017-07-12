@@ -1,0 +1,448 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Анализы'
+  - var activeMenu = 0
+  - var headerCart = true
+block content
+  .layout
+    // start tests
+    section.tests 
+      .page-top
+        .container
+          h1.section-heading Анализы и цены
+    // start banner-slider
+    .banner-slider.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+        .swiper-slide
+          a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+        .swiper-slide
+          a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+      .swiper-pagination
+    // end banner-slider
+    .layout-wrapper
+      .container
+        .row
+          .col-xs-12.col-sm-12.col-md-5.col-lg-5
+            .layout-aside.tests-aside
+              // start tabs-nav
+              .tabs.tabs-nav.no-style(data-slider=".tests-nav-slider")
+                a.tab-pane.no-default-style.js-active(href="#")
+                  span Анализы
+                a.tab-pane.no-default-style(href="#")
+                  span Комплексные программы
+              // end tabs-nav
+              .tests-nav-slider.swiper-container
+                .swiper-wrapper
+                  // start tests-nav-slide
+                  .swiper-slide
+                    .tests-menu
+                      form.tests-search-form
+                        .input-search-wrap
+                          input.input-search(type="text" placeholder="Введите название анализа")
+                          .ic-search
+                      nav.tests-nav
+                        ul
+                          li: a.active(href="#") Общеклинические исследования
+                          li: a(href="#") Иммуногематология
+                          li: a(href="#") Гемостазиологические исследования
+                          li: a(href="#") Биохимические исследования крови
+                          li: a(href="#") Гормональные исследования
+                          li: a(href="#") Онкомаркеры  
+                          li: a(href="#") Иммунологические исследования
+                          li: a(href="#") Аллергология
+                          li: a(href="#") Аутоиммунные заболевания
+                          li: a(href="#") Микроэлементы и лекарственный мониторинг
+                          li: a(href="#") Маркеры инфекционных заболеваний
+                          li: a(href="#") Бактериологические исследования
+                          li: a(href="#") Цитология и микроскопия
+                          li: a(href="#") Исследование эякулята
+                          li: a(href="#") Гистология
+                          li: a(href="#") Генетические исследования
+                          li: a(href="#") Цитогенетические исследования
+                  // end tests-nav-slide
+                  // start tests-nav-slide
+                  .swiper-slide
+                    .tests-menu
+                      form.tests-search-form
+                        input.input-search(type="text" placeholder="Введите название программы")
+                      nav.tests-nav
+                        ul
+                          li: a(href="#") Общеклинические исследования
+                          li: a(href="#") Иммуногематология
+                          li: a(href="#") Гемостазиологические исследования
+                          li: a(href="#") Биохимические исследования крови
+                          li: a(href="#") Гормональные исследования
+                          li: a(href="#") Онкомаркеры  
+                          li: a(href="#") Иммунологические исследования
+                  // end tests-nav-slide
+          .col-xs-12.col-sm-12.col-md-7.col-lg-7
+            .layout-middle
+              // start tests-headings-list
+              ul.tests-headings-list.clearfix
+                li.col-xs-3.col-sm-3.col-md-1.col-lg-1 №
+                li.col-xs-9.col-sm-9.col-md-6.col-lg-6 Название 
+                li.col-xs-3.col-sm-3.col-md-1.col-lg-1.shifted Стоимость
+                li.col-xs-9.col-sm-9.col-md-3.col-lg-3 Опции 
+              // end tests-headings-list
+              h2.tests-heading Общеклинические исследования
+              // start tests-items
+              .tests-items
+                // start test-item
+                .tests-item
+                  a.tests-item-top.js-tests-item-trigger(href="#" role="button")
+                    .inner Общеклинические исследования кала
+                  .tests-item-content
+                    ul.tests-item-list
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Общий анализ кала
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на скрытую кровь (Fecal Occult Blood Test)
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на яйца гельминтов
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Исследование соскоба на энтеробиоз
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Кал на скрытую кровь (Colon View Hb/Hp) (Колон вью гемоглобин (Hb) и гемоглобин/гаптоглобиновый комплекс (Hb/Hp))
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                // end test-item
+                // start test-item
+                .tests-item
+                  a.tests-item-top.js-tests-item-trigger(href="#" role="button")
+                    .inner Общеклинические исследования кала
+                  .tests-item-content
+                    ul.tests-item-list
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Общий анализ кала
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на скрытую кровь (Fecal Occult Blood Test)
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на яйца гельминтов
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Исследование соскоба на энтеробиоз
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Кал на скрытую кровь (Colon View Hb/Hp) (Колон вью гемоглобин (Hb) и гемоглобин/гаптоглобиновый комплекс (Hb/Hp))
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                // end test-item
+                // start test-item
+                .tests-item
+                  a.tests-item-top.js-tests-item-trigger(href="#" role="button")
+                    .inner Общеклинические исследования кала
+                  .tests-item-content
+                    ul.tests-item-list
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Общий анализ кала
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на скрытую кровь (Fecal Occult Blood Test)
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на яйца гельминтов
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Исследование соскоба на энтеробиоз
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Кал на скрытую кровь (Colon View Hb/Hp) (Колон вью гемоглобин (Hb) и гемоглобин/гаптоглобиновый комплекс (Hb/Hp))
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                // end test-item
+                // start test-item
+                .tests-item
+                  a.tests-item-top.js-tests-item-trigger(href="#" role="button")
+                    .inner Общеклинические исследования кала
+                  .tests-item-content
+                    ul.tests-item-list
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Общий анализ кала
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на скрытую кровь (Fecal Occult Blood Test)
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Анализ кала на яйца гельминтов
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Исследование соскоба на энтеробиоз
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                      // start list-item
+                      li
+                        .row
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-num(data-text="№") 110201
+                          .col-xs-9.col-sm-9.col-md-6.col-lg-6
+                            .col-test-name(data-text="Название"): a(href="#") Кал на скрытую кровь (Colon View Hb/Hp) (Колон вью гемоглобин (Hb) и гемоглобин/гаптоглобиновый комплекс (Hb/Hp))
+                          .col-xs-3.col-sm-3.col-md-1.col-lg-1
+                            .col-price(data-text="Стоимость") 305 Р
+                          .col-xs-9.col-sm-9.col-md-4.col-lg-4
+                            .col-options(data-text="Опции") 
+                              a.circle.circle-option.option-car.js-option(href="#" role="button" data-toggle="tooltip" data-title="Выезд на дом")
+                              a.circle.circle-option.option-clock.js-option(href="#" role="button" data-toggle="tooltip" data-title="За 2 часа")
+                              a.circle.circle-option.option-cart.js-option(href="#" role="button" data-toggle="tooltip" data-title="В корзину")
+                      // end list-item
+                // end test-item
+              // end tests-items
+    // end tests
+    .ask_your_question.inner
+      .clearfix.auq_in
+        .auq_in_ttl
+          h3 Задать #[br] вопрос врачу
+          .brdh
+        .auq_form
+          #af1.af
+          #af2.af
+          #af3.af
+          #af4.af
+          #af5.af
+          #af6.af
+          #af7.af
+          #af8.af
+          #af9.af
+          form(action='#', method='post')
+            .af_inpt
+              .afi_inp
+                input(type='text', placeholder='Имя*')
+              .afi_inp
+                input.email(type='text', placeholder='E-mail*')
+              .afi_txtr
+                textarea(placeholder='Ваше сообщение*')
+              .afi_btn
+                button Отправить
+  include partials/_popups.pug

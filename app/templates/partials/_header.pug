@@ -88,6 +88,14 @@ else
                 .hdr_search Поиск
                 .hdr_personal_area
                   a(href='#') Личный кабинет
+              if (headerCart)
+                a.hdr_cart_link(href="#")
+                  .count 0
+                  .circle.circle-cart
+              if (headerCartFull)
+                a.hdr_cart_link.hdr_cart_link_full(href="#")
+                  .count 0
+                  .circle.circle-cart
               .hdr_rght_btm
                 a(href='tel:88007001072') 8 (800) 700 10 72
                 a(href='tel:84957251072') 8 (495) 725 10 72

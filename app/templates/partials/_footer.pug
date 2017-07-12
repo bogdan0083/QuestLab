@@ -14,7 +14,13 @@ if (footerEmpty)
               a(href='tel:84957251072') 8 (495) 725 10 72
             .fcnt
               .fcnt_btn
-                a.fancybox(href='#enter_contract') Заключить договор
+                if (franchise)
+                  a.button.button-franchise.button-icon.button-gray.fancybox(href="#choose-franchise")
+                    span Выбрать франшизу
+                    span.ic
+                      include ../data/list.svg
+                else
+                  a.fancybox(href='#enter_contract') Заключить договор
     .clearfix.ftr_btm
       .fb_cnt
         ul.fb_cnt_list
@@ -62,7 +68,7 @@ if (footerEmpty)
             a(href='http://www.liqium.ru/', target='_blank') Liqium
   //END footer
 else
-  .ftr
+  .ftr.ftr-full
     .container
       .row
         .col-xs-12.col-sm-12.col-md-12.col-lg-12
@@ -74,10 +80,18 @@ else
             .fphone
               a(href='tel:88007001072') 8 (800) 700 10 72
               a(href='tel:84957251072') 8 (495) 725 10 72
-            .fcnt
-              .fcnt_btn
-                a.fancybox(href='#enter_contract') Заключить договор
-            include _main-nav.pug
+            .socials
+              a.social-link(href="#")
+                include ../data/facebook.svg
+              a.social-link(href="#")
+                include ../data/twitter.svg
+              a.social-link.vk(href="#")
+                include ../data/vk.svg
+              a.social-link(href="#")
+                include ../data/instagram.svg
+              a.social-link(href="#")
+                include ../data/odnoklassniki.svg
+    include _main-nav-footer.pug
     .clearfix.ftr_btm
       .fb_cnt
         ul.fb_cnt_list

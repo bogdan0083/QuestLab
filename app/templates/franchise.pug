@@ -1,11 +1,13 @@
 //- title: Index Page
 extends layouts/_layout
 block head
-  - var title = 'Main page'
+  - var title = 'Франшиза'
   - var headerTransparent = true
   - var activeMenu = 4
   - var headerEmpty = true
   - var footerEmpty = true
+  - var franchise = true
+  - var franchiseFooterNav = true;
 block content
     // start franchise-promo
     .franchise-promo 
@@ -27,7 +29,7 @@ block content
                 p Ваша независимость, ваша компания, ваше будущее
               .slide-bottom
                 .rect-second
-                  a.button(href="#") Узнать больше
+                  a.button.fancybox(href="#double-pp") Узнать больше
                   .rect-line.line1
                   .rect-line.line2
                   .rect-line.line3
@@ -35,7 +37,7 @@ block content
           // end swiper-slide
           // start swiper-slide
           .swiper-slide
-            .bg(style="background-image: url(img/franchise-bg1.jpg)")
+            .bg(style="background-image: url(img/franchise-bg2.jpg)")
             .slide-content
               .slide-top
                 .rect-first
@@ -46,10 +48,10 @@ block content
                   .rect-caption Франшиза
               .slide-middle
                 h1.slide-heading Легкий старт
-                p Франшиза без паушального взноса и роялти
+                p Франшиза без паушального взноса
               .slide-bottom
                 .rect-second
-                  a.button(href="#") Узнать больше
+                  a.button.fancybox(href="#double-pp") Узнать больше
                   .rect-line.line1
                   .rect-line.line2
                   .rect-line.line3
@@ -57,7 +59,7 @@ block content
           // end swiper-slide
           // start swiper-slide
           .swiper-slide
-            .bg(style="background-image: url(img/franchise-bg1.jpg)")
+            .bg(style="background-image: url(img/franchise-bg3.jpg)")
             .slide-content
               .slide-top
                 .rect-first
@@ -71,7 +73,7 @@ block content
                 p Комплексное бизнес-сопровождение, штат профессиональных управляющих
               .slide-bottom
                 .rect-second
-                  a.button(href="#") Узнать больше
+                  a.button.fancybox(href="#double-pp") Узнать больше
                   .rect-line.line1
                   .rect-line.line2
                   .rect-line.line3
@@ -85,45 +87,42 @@ block content
       .container
         .row
           .franchise-unique-circle(data-aos="fade-up" data-aos-duration="1000" data-aos-anchor=".franchise-unique")
+            svg.svg-circle(width="408px" height="408px" viewBox="0 0 412 412")
+              circle(cx="206" cy="206" r="204" stroke="#ccdb2a" stroke-width="2")
             .inner
               .icon-mark-map
-              h3.lined Революционная
-              p концепция для бизнеса #[br] и пациентов
+              h3.lined NewView
+              p Персонификация бизнеса #[br] и лабораторного сервиса
           .col-xs-12.col-sm-6.col-md-4.col-lg-4(data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600" data-aos-anchor=".franchise-unique")
             .franchise-unique-item.lined
               .circle
                 span 1
-              h5 Модель франшизы LabQuest 
-              p не является типичной для рынка лабораторной диагностики
+              h5 Бренд
+              p персонифицированной диагностики #[br] и премиальных стандартов обслуживания
           .col-xs-12.col-sm-6.col-md-4.col-lg-4.col-md-offset-4.col-lg-offset-4(data-aos="fade-left" data-aos-duration="1000" data-aos-delay="1200" data-aos-anchor=".franchise-unique")
             .franchise-unique-item.lined
               .circle
                 span 2
-              h5 Франшиза LabQuest —
-              p это проект со стабильной доходностью и широким набором услуг
+              h5 Новый подход
+              p к сознанию потребителя: #[br] человек — менеджер своего здоровья
           .col-xs-12.col-sm-6.col-md-4.col-lg-4(data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1800" data-aos-anchor=".franchise-unique")
             .franchise-unique-item
               .circle
                 span 3
-              h5 Мы единственные в России,
-              p кто создает розничную сеть медицинских офисов по лабораторной диагностике Premium формата
+              h5 Идеальный бизнес-климат —
+              p партнерские отношения в диалоге
           .col-xs-12.col-sm-6.col-md-4.col-lg-4.col-md-offset-4.col-lg-offset-4(data-aos="fade-left" data-aos-duration="1000" data-aos-delay="2400" data-aos-anchor=".franchise-unique")
             .franchise-unique-item
               .circle
                 span 4
-              h5 Франшиза объединяет
-              p
-                | бренд LabQuest и суббренды Doctor Q,
-                br 
-                | LabQuest microbiology и LabQuest
-                br 
-                | histology
+              h5 Собственный медицинский бизнес — 
+              p часть общей системы здравоохранения России, ваш вклад в здоровье нации.
     // end franchise-unique
     // start d3_tur
     .d3_tur.d3_tur-secondary
       .container
         .desc_txt
-          p Многопрофильный производственный комплекс LabQuest открыт!
+          p Концепт медицинского офиса с индивидуальным дизайном под помещение партнера
         .d3c
           .crc
             p.tur_txt the future
@@ -153,19 +152,19 @@ block content
                   .circle(data-aos="zoom-out" data-aos-duration="1000" data-aos-anchor=".formats" data-aos-delay="300")
                     .icon.icon-check
                   .inner
-                    h4 Премиум #[span формат]
+                    h4 Premium #[span формат]
             .col-xs-12.col-sm-4.col-md-4.col-lg-4.col-lined(data-aos="fade-in" data-duration="1000" data-aos-delay="2000" data-aos-anchor=".formats")
               .formats-item.formats-item-arrowed
                 .circle(data-aos="zoom-out" data-aos-duration="1000" data-aos-anchor=".formats" data-aos-delay="2000")
                   .icon.icon-check
                 .inner
-                  h4 Франчайзинг #[span без вложения]  
+                  h4 Business #[span формат]  
             .col-xs-12.col-sm-4.col-md-4.col-lg-4(data-aos="fade-in" data-duration="1000" data-aos-delay="1100" data-aos-anchor=".formats")
               .formats-item
                 .circle(data-aos="zoom-out" data-aos-duration="1000" data-aos-anchor=".formats" data-aos-delay="1100")
                   .icon.icon-check
                 .inner
-                  h4 Бизнес #[span формат]
+                  h4 Privilege #[span формат]
       .invest-price
         .container
           .invest-price-group
@@ -175,26 +174,26 @@ block content
                 p паушальный взнос
             .col-xs-12.col-sm-4.col-md-4.col-lg-4.nopad
               .invest-price-item
-                h3 0,00
-                p роялти
+                h3 50%
+                p доходная часть
             .col-xs-12.col-sm-4.col-md-4.col-lg-4.nopad
               .invest-price-item
-                h3 Фикс. плата 
-                p за ключевые экспертизы 
+                h3 0%
+                p роялти до 3 года работы
         .invest-success
           h3.lined Правильные инвестиции
           p Бизнес на рынке лабораторной диагностики стабильный и доходный. #[br] Нам важно, чтобы в бизнес пришли партнеры, которые ценят высокие стандарты качества лабораторных услуг и сервиса и разделяют наше видение
-          a.button.button-icon.button-gray(href="#")
+          a.button.button-icon.button-gray.fancybox(href="#choose-franchise")
             span Выбрать франшизу
             span.ic
               include data/list.svg
     // end formats
     // start franchise-steps
-    section.franchise-steps
+    section.franchise-steps.swiper-container
       h2.section-heading Сделайте первый шаг
-      .franchise-group
+      .franchise-group.swiper-wrapper
         // start franchise-step
-        .franchise-step.step1(style="background-image: url(img/step-bg1.jpg)")
+        .franchise-step.swiper-slide.step1(style="background-image: url(img/step-bg1.jpg)")
           .inner
             .franchise-step-top
               .top-wrap
@@ -206,7 +205,7 @@ block content
               a.button.button-white(href="#") Узнать все этапы
         // end franchise-step
         // start franchise-step
-        .franchise-step.step2(style="background-image: url(img/step-bg2.jpg)")
+        .franchise-step.swiper-slide.step2(style="background-image: url(img/step-bg2.jpg)")
           .inner
             .franchise-step-top
               .top-wrap
@@ -218,7 +217,7 @@ block content
               a.button.button-white(href="#") Узнать все этапы
         // end franchise-step
         // start franchise-step
-        .franchise-step.step3(style="background-image: url(img/step-bg3.jpg)")
+        .franchise-step.swiper-slide.step3(style="background-image: url(img/step-bg3.jpg)")
           .inner
             .franchise-step-top
               .top-wrap
@@ -230,7 +229,7 @@ block content
               a.button.button-white(href="#") Узнать все этапы
         // end franchise-step
         // start franchise-step
-        .franchise-step.step4(style="background-image: url(img/step-bg4.jpg)")
+        .franchise-step.swiper-slide.step4(style="background-image: url(img/step-bg4.jpg)")
           .inner
             .franchise-step-top
               .top-wrap
@@ -242,7 +241,7 @@ block content
               a.button.button-white(href="#") Узнать все этапы
         // end franchise-step
         // start franchise-step
-        .franchise-step.step5(style="background-image: url(img/step-bg5.jpg)")
+        .franchise-step.swiper-slide.step5(style="background-image: url(img/step-bg5.jpg)")
           .inner
             .franchise-step-top
               .top-wrap
@@ -253,6 +252,8 @@ block content
             .franchise-step-bottom
               a.button.button-white(href="#") Узнать все этапы
         // end franchise-step
+      .franchise-steps-bottom
+        a.button.button-gray(href="#") Узнать все этапы
     // end franchise-steps
     // start franchise-priveleges
     section.franchise-priveleges 
@@ -264,14 +265,14 @@ block content
               .franchise-privelege
                 .circle(data-aos="fade-up")
                   .icon.icon-check-large
-                h4.lined Эксклюзивный #[br] географический статус
-                p LabQuest только выходит на рынок диагностических услуг. Инвесторы не ограничены в выборе территории для ведения бизнеса
+                h4.lined Отсутствие #[br] конкурентов
+                p Франшиза LabQuest — единственная медицинская франшиза в сфере персонифицированной диагностики и премиальных стандартов лабораторного сервиса
             .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
                 .circle(data-aos="fade-up")
                   .icon.icon-check-large
                 h4.lined Единый центр #[br] снабжения 
-                p LabQuest использует систему централизованного снабжения расходными материалами, элементами оформления медицинского офиса обеспечения франчайзи полиграфической и рекламной продукцией и т. д.
+                p LabQuest использует систему централизованного снабжения расходными материалами, элементами оформления медицинского офиса, обеспечения франчайзи полиграфической и рекламной продукцией и т. д.
             .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
                 .circle(data-aos="fade-up")
@@ -288,8 +289,8 @@ block content
               .franchise-privelege
                 .circle(data-aos="fade-up")
                   .icon.icon-check-large
-                h4.lined Новые возможности на рынке лабораторной диагностики
-                p Бизнес-идеи, основанные на особенностях национальных культур и религий 
+                h4.lined Минимальная нагрузка #[br] на предпринимателя
+                p LabQuest предлагает комплекс решений в зоне единой логистики, финансов, маркетинга, персонала и в других областях бизнеса
             .col-xs-12.col-sm-6.col-md-6.col-lg-4
               .franchise-privelege
                 .circle(data-aos="fade-up")
@@ -300,12 +301,12 @@ block content
               .franchise-privelege
                 .circle(data-aos="fade-up")
                   .icon.icon-check-large
-                h4.lined Неограниченный #[br] финансовый потенциал
-                p Партнеры компании строят бизнес в процветающей отрасли
+                h4.lined Ответственность и #[br] открытость франчайзера
+                p Регулярные бизнес-встречи менеджмента управляющей компании и партнеров-франчайзи
     // end franchise-priveleges
     // start business-features
     section.business-features 
-      h2.section-heading Привилегии для инвесторов
+      h2.section-heading Возможности для бизнеса
       .container
         .row
           .col-xs-12.col-sm-12.col-md-6.col-lg-6
@@ -318,12 +319,12 @@ block content
               p Приобретение нескольких франшиз (постепенно) для ведения бизнеса и управления всеми франчайзинговыми медицинскими офисами самостоятельно или через наемного менеджера
           .col-xs-12.col-sm-12.col-md-6.col-lg-6
             .business-feature
-              h3.lined Дивизиональный менеджмент
-              p Мастер-франшиза на страну/регион. #[br] Для тех, кто заинтересован в развитии бренда на широком уровне. Региональная и межрегиональная экспансия. 
-              p Самостоятельное привлечение франчайзи, предоставление им постоянной поддержки и обучения при содействии со стороны франчайзера LabQuest
+              h3.lined Мастер-франшиза
+              p Для тех, кто заинтересован в развитии #[br] бренда на широком уровне.
+              p Региональная и межрегиональная экспансия
           .col-xs-12.col-sm-12.col-md-6.col-lg-6
             .business-feature
-              h3.lined Политерриториальные франчайзи
-              p Франшиза предоставляется только одному франчайзи с перспективами развития конкретной территории и с определенным количеством франчайзинговых точек (для исключения возможности работы на данной территории другого франчайзи)
+              h3.lined Продуманная реализация проекта
+              p Франшиза LabQuest — ответ на каждый вопрос на  любом этапе развития бизнеса. Задача команды — снять с партнера бремя повседневных решений и сделать все, чтобы бизнес был простым и комфортным.
     // end business-features
     include partials/_popups.pug

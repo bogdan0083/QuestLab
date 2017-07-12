@@ -1,0 +1,372 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Адреса'
+  - var activeMenu = 0
+  - var addressFooterNav = true
+block content
+  .layout
+    // start adresses
+    section.adresses 
+      .page-top
+        .container
+          h1.section-heading Адреса и время работы
+      // start banner-slider
+      .banner-slider.swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+          .swiper-slide
+            a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+          .swiper-slide
+            a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+        .swiper-pagination
+      // end banner-slider
+      .tabs.addresses-tabs(data-slider=".address-view-slider")
+        .container
+          a.tab-pane.js-active(href="#" role="button" data-idx="0") Списком
+          a.tab-pane(href="#" role="button" data-idx="1") На карте города
+          a.tab-pane(href="#" role="button" data-idx="2") На карте метро
+      // start offices-filter
+      .offices-sort
+        h2 Медицинские офисы в Москве
+        form(action="#")
+          .grid.grid-closed
+            .checkbox-col
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Работа без выходных
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Бесплатная парковка
+            .checkbox-col
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Круглосуточный режим работы
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Оплата банковской картой
+            .checkbox-col
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Без очереди
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span С 6:30 утра
+            .checkbox-col
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Работа без выходных
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Бесплатная парковка
+            .checkbox-col
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Круглосуточный режим работы
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Оплата банковской картой
+            .checkbox-col
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span Без очереди
+              label.checkbox
+                input(type="checkbox" name="agreed")
+                span С 6:30 утра
+          a.show-all-filters.js-toggle-filters(href="#" role="button") 
+            span Показать все услуги
+      // end offices-filter
+      // start address-view-slider
+      .address-view-slider.swiper-container
+        .swiper-wrapper
+          // Старт вид Адреса списком
+          .swiper-slide
+            // ADDRESS LISTS SLIDER
+            .address-lists.swiper-container
+              .gfs_nav
+                .swiper-pagination
+                .swiper-button-prev
+                .swiper-button-next
+              .swiper-wrapper
+                .swiper-slide
+                  ul.address-list
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Бережковский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-blue(href="#")
+                                  span.dot
+                                  span.text Киевская
+                              div
+                                a.address-metro-link.color-brown(href="#")
+                                  span.dot
+                                  span.text Студенческая
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Новогиреевский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-orange(href="#")
+                                  span.dot
+                                  span.text Новогиреево
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Бережковский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-blue(href="#")
+                                  span.dot
+                                  span.text Киевская
+                              div
+                                a.address-metro-link.color-brown(href="#")
+                                  span.dot
+                                  span.text Студенческая
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Новогиреевский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-orange(href="#")
+                                  span.dot
+                                  span.text Новогиреево
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Бережковский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-blue(href="#")
+                                  span.dot
+                                  span.text Киевская
+                              div
+                                a.address-metro-link.color-brown(href="#")
+                                  span.dot
+                                  span.text Студенческая
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Новогиреевский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-orange(href="#")
+                                  span.dot
+                                  span.text Новогиреево
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                .swiper-slide
+                  ul.address-list
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Бережковский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-blue(href="#")
+                                  span.dot
+                                  span.text Киевская
+                              div
+                                a.address-metro-link.color-brown(href="#")
+                                  span.dot
+                                  span.text Студенческая
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Новогиреевский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-orange(href="#")
+                                  span.dot
+                                  span.text Новогиреево
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Бережковский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-blue(href="#")
+                                  span.dot
+                                  span.text Киевская
+                              div
+                                a.address-metro-link.color-brown(href="#")
+                                  span.dot
+                                  span.text Студенческая
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Новогиреевский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-orange(href="#")
+                                  span.dot
+                                  span.text Новогиреево
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Бережковский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-blue(href="#")
+                                  span.dot
+                                  span.text Киевская
+                              div
+                                a.address-metro-link.color-brown(href="#")
+                                  span.dot
+                                  span.text Студенческая
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+                    // start address-item
+                    li
+                      .top
+                        .address-name «Новогиреевский»
+                        a.address-info-link(href="#") Подробнее
+                      .content
+                        .row
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-location 112233, г. Москва, #[br] Зелёный пр-кт, д. 81
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-metros
+                              div
+                                a.address-metro-link.color-orange(href="#")
+                                  span.dot
+                                  span.text Новогиреево
+                          .col-xs-12.col-sm-12.col-md-4.col-lg-4
+                            .address-worktime пн.-пт. 7:00-19:00 #[br] сб. 8:00-15:00, вс. выходной
+                    // end address-item
+            .address-lists-bottom
+              a.button.button-gray(href="#") Показать все
+          // Старт вид Адреса на карте
+          .swiper-slide.swiper-no-swiping
+            // start offices-map
+            .offices-map
+            // end offices-map
+          // Старт вид Адреса на метро
+          .swiper-slide.swiper-no-swiping
+            #metro-map
+      // end address-view-slider
+    // end adresses
+    .ask_your_question.inner
+      .clearfix.auq_in
+        .auq_in_ttl
+          h3 Задать #[br] вопрос Doctor Q
+        .auq_form
+          #af1.af
+          #af2.af
+          #af3.af
+          #af4.af
+          #af5.af
+          #af6.af
+          #af7.af
+          #af8.af
+          #af9.af
+          form(action='#', method='post')
+            .af_inpt
+              .afi_inp
+                input(type='text', placeholder='Имя*')
+              .afi_inp
+                input.email(type='text', placeholder='E-mail*')
+              .afi_txtr
+                textarea(placeholder='Ваше сообщение*')
+              .afi_btn
+                button Отправить
+  include partials/_popups.pug

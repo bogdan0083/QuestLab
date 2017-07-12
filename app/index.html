@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <!-- build:css css/libs.min.css-->
     <link rel="stylesheet" media="all" href="css/libs.min.css">
     <!-- endbuild-->
@@ -1049,8 +1049,8 @@
         </div>
         <div class="blc_pp_wt">
             <form class="hot_ln" action="#" method="post">
-                <div class="pp_in name_med"><span>Наименование медицинского учреждения <i>*</i></span>
-                    <input class="ptt" type="text" name="medical_institution" required="">
+                <div class="pp_in name_med"><span>Наименование медицинского учреждения </span>
+                    <input class="ptt" type="text" name="medical_institution">
                 </div>
                 <div class="pp_in pp_name"><span>Ваше имя <i>*</i></span>
                     <input class="ptt" type="text" name="firstname" required="">
@@ -1069,6 +1069,167 @@
                 <div class="blc_check_results">
                     <p class="pp_notis"><i>*</i> Обязательные поля для заполнения</p>
                     <button class="get_go">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="hides win_popup" id="double-pp">
+        <div class="line_pp">
+            <div class="tabs" data-slider=".popup-slider">
+                <a class="tab-pane js-active" href="#"> <span>Отправить сообщение</span>
+                </a><a class="tab-pane" href="#"><span>Заказать звонок</span></a>
+            </div>
+        </div>
+        <div class="swiper-container popup-slider">
+            <div class="swiper-wrapper">
+                <!-- start popup-slide-->
+                <div class="swiper-slide">
+                    <div class="blc_pp_wt">
+                        <form class="hot_ln" action="#" method="post">
+                            <div class="pp_in pp_name"><span>Ваше имя <i>*</i></span>
+                                <input class="ptt" type="text" name="firstname" required="">
+                            </div>
+                            <div class="clearfix tw_pp">
+                                <div class="pp_in"><span>Телефон</span>
+                                    <input class="phone ptt" type="text">
+                                </div>
+                                <div class="pp_in"><span>E-mail <i>*</i></span>
+                                    <input class="email" type="text" name="mail" required="">
+                                </div>
+                            </div>
+                            <div class="blc_tstar name_sotr"><span>Ваши планы по сотрудничеству<i>*</i></span>
+                                <textarea class="ptt" name="txt"></textarea>
+                            </div>
+                            <div class="i_agree">
+                                <input class="css-checkbox" id="checkboxG3" type="checkbox" name="checkboxG3">
+                                <label class="css-label" for="checkboxG3">Я согласен(а) на обработку <a href="docs/consent_to_personal_data_processing.pdf" target="_blank">предоставленных мною персональных данных</a>
+                                </label>
+                            </div>
+                            <div class="blc_check_results">
+                                <p class="pp_notis"><i>*</i> Обязательные поля для заполнения</p>
+                                <button class="get_go">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end popup-slide-->
+                <!-- start popup-slide-->
+                <div class="swiper-slide">
+                    <div class="blc_pp_wt">
+                        <form class="hot_ln" action="#" method="post">
+                            <div class="clearfix tw_pp">
+                                <div class="pp_in"><span>Ваше имя <i>*</i></span>
+                                    <input class="phone ptt" type="text">
+                                </div>
+                                <div class="pp_in"><span>Телефон<i>*</i></span>
+                                    <input class="phone" type="text" name="phone" required="">
+                                </div>
+                            </div>
+                            <div class="i_agree">
+                                <input class="css-checkbox" id="checkboxG4" type="checkbox" name="checkboxG4">
+                                <label class="css-label" for="checkboxG4">Я согласен(а) на обработку <a href="docs/consent_to_personal_data_processing.pdf" target="_blank">предоставленных мною персональных данных</a>
+                                </label>
+                            </div>
+                            <div class="blc_check_results">
+                                <p class="pp_notis"><i>*</i> Обязательные поля для заполнения</p>
+                                <button class="get_go">Позвоните мне</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- end popup-slide-->
+            </div>
+        </div>
+    </div>
+    <div class="hides win_popup" id="choose-franchise">
+        <div class="line_pp">
+            <h3>Выбрать франшизу</h3>
+            <p>Получить бесплатную консультацию при выборе франшизы</p>
+        </div>
+        <div class="blc_pp_wt">
+            <form class="hot_ln" action="#" method="post">
+                <div class="clearfix tw_pp">
+                    <div class="pp_in pp_name"><span>Ваше имя <i>*</i></span>
+                        <input class="ptt" type="text" name="firstname" required="">
+                    </div>
+                    <div class="pp_in"><span>Город<i>*</i></span>
+                        <input class="ptt" type="text" name="city" required="">
+                    </div>
+                </div>
+                <div class="clearfix tw_pp">
+                    <div class="pp_in"><span>Телефон</span>
+                        <input class="phone ptt" type="text">
+                    </div>
+                    <div class="pp_in"><span>E-mail <i>*</i></span>
+                        <input class="email" type="text" name="mail" required="">
+                    </div>
+                </div>
+                <div class="clearfix checkbox-block inline">
+                    <div class="text">Опыт предпринимательства<i>*</i>
+                    </div>
+                    <div class="content">
+                        <label class="checkbox checkbox-inline">
+                            <input type="radio" name="exp" checked><span>Да</span>
+                        </label>
+                        <label class="checkbox checkbox-inline">
+                            <input type="radio" name="exp"><span>Нет</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="chearfix">
+                    <div class="input-bl">
+                        <div class="text">Капитал для инвестиций в франшизу<i>*</i>
+                        </div>
+                        <div class="inputs-double">
+                            <div class="pp_in pp_in_secondary pp_in_range"><span>от</span>
+                                <input class="ptt" type="text">
+                            </div>
+                            <div class="pp_in pp_in_range pp_in_secondary"><span>до</span>
+                                <input class="ptt" type="text">
+                            </div>
+                        </div>
+                        <div class="inputs-double">
+                            <div class="pp_in pp_in_range pp_in_secondary"><span>от</span>
+                                <input class="ptt" type="text">
+                            </div>
+                            <div class="pp_in pp_in_range pp_in_secondary"><span>до</span>
+                                <input class="ptt" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix checkbox-block">
+                    <div class="text">Как вы узнали о нашей франшизе<i>*</i>
+                    </div>
+                    <div class="content">
+                        <label class="checkbox">
+                            <input type="checkbox" name="capital" checked><span>Cотрудники компании</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="capital"><span>Cоциальные сообщества</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="capital"><span>Cайт www.labquest.ru</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="capital"><span>Профессиональные сообщества</span>
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" name="capital"><span>Иное</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="clearfix pp_in pp_in_calltime"><span>Удобное время для звонка<i>*</i></span>
+                    <input class="ptt" type="text" name="calltime" required="">
+                </div>
+                <div class="i_agree">
+                    <input class="css-checkbox" id="checkboxG5" type="checkbox" name="checkboxG5">
+                    <label class="css-label" for="checkboxG5">Я согласен(а) на обработку <a href="docs/consent_to_personal_data_processing.pdf" target="_blank">предоставленных мною персональных данных</a>
+                    </label>
+                </div>
+                <div class="blc_check_results">
+                    <p class="pp_notis"><i>*</i> Обязательные поля для заполнения</p>
+                    <button class="get_go">Запросить информацию</button>
                 </div>
             </form>
         </div>
@@ -1184,6 +1345,30 @@
             <p>Ваше обращение успешно отправлено</p><span>и его уже рассматривают специалисты лабораторииh1 Index page</span>
         </div>
     </div>
+    <div class="hides face-card-popup" id="face-card">
+        <a class="popup-close" href="javascript:$.fancybox.close()"></a>
+        <h2>Карточка юридического лица</h2>
+        <table class="face-card-table">
+            <tbody>
+                <tr>
+                    <td>Наименование</td>
+                    <td>АО «ЛабКвест»</td>
+                </tr>
+                <tr>
+                    <td>Юридический адрес</td>
+                    <td>121059, г. Москва, Бережковская наб., д. 20, стр. 13</td>
+                </tr>
+                <tr>
+                    <td>Фактический адрес</td>
+                    <td>121059, г. Москва, Бережковская наб., д. 20, стр. 13</td>
+                </tr>
+                <tr>
+                    <td>Лицензия</td>
+                    <td>ЛО-77-01-013785 от 19 января 2017 г.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <!-- end popups-->
     <!--BEGIN footer-->
     <div class="ftr">
@@ -1265,8 +1450,16 @@
     </div>
     <!--END footer-->
     <!--LOAD SCRIPTS-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwVP6JlQ0C8tmJoDFh_piM3F6TMxu1n20"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;load=&amp;mode=debug"></script>
     <!-- build:js js/lib.min.js-->
     <script type="text/javascript" src="js/lib.min.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/tooltip.js-->
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <!-- endbuild-->
+    <!-- build:js js/metro.js-->
+    <script type="text/javascript" src="js/metro.js"></script>
     <!-- endbuild-->
     <!-- build:js js/custom.js-->
     <script type="text/javascript" src="js/custom.js"></script>

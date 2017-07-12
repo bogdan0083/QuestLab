@@ -1,0 +1,87 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Выезд на дом'
+  - var activeMenu = 0
+  - var headerCart = true
+block content
+  .layout
+    // start home-visits
+    section.home-visits 
+      .page-top
+        .container
+          h1.section-heading Выезд на дом
+    // start banner-slider
+    .banner-slider.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+        .swiper-slide
+          a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+        .swiper-slide
+          a.banner-image-link(href="#" style="background-image: url(img/banner.jpg)")
+      .swiper-pagination
+    // end banner-slider
+    .layout-wrapper
+      // start home-visits-promo
+      section.home-visits-promo
+        .container
+          h4 Какие анализы и почему именно они должны быть сданы?
+          h3 Получить персональную помощь Doctor Q
+          .left
+            .home-visits-promo-item
+              .circle
+                img(src="img/blue-mark.png" alt="Марке")
+              .text.lined Офисы для посещений
+              a.button.button-short(href="#") Выбрать
+          .middle
+            .doctorq-logo
+              img(src="img/dr-q.png" alt="Doctor Q")
+          .right
+            .home-visits-promo-item
+              .circle
+                img(src="img/speech.png" alt="Написать")
+              .text.lined Написать
+              a.mail-link(href="mailto:doctor_q@labquest.ru") doctor_q@labquest.ru
+      // end home-visits-promo
+      // start home-request
+      section.home-request
+        .container
+          h2.section-heading(data-aos="fade-up" data-aos-anchor=".home-request" data-aos-duration="800" data-aos-delay="400")
+          .row
+            .col-xs-12.col-sm-12.col-md-4
+              .home-request-item(data-aos="fade-left" data-aos-anchor=".home-request" data-aos-duration="800" data-aos-delay="400")
+                .circle
+                  include data/clock-dark.svg
+                h4.lined Время приема заявок
+                p 
+                a.button.button-short(href="#") Записаться
+            .col-xs-12.col-sm-12.col-md-4
+              .home-request-item(data-aos="fade-left" data-aos-anchor=".home-request" data-aos-duration="800" data-aos-delay="800")
+                .circle
+                  include data/car.svg
+                h4.lined Время выезда
+                p 
+                a.button.button-short.fancybox(href="#double-pp") Обратный звонок
+            .col-xs-12.col-sm-12.col-md-4
+              .home-request-item(data-aos="fade-left" data-aos-anchor=".home-request" data-aos-duration="800" data-aos-delay="1200")
+                .circle
+                  include data/male-user.svg
+                h4.lined Срочный выезд
+                p 
+                a.button.button-short(href="#") Моя лобаратория
+      // end home-request
+      // start useful-info
+      .useful-info 
+        .container
+          h2.section-heading Полезная информация
+          .group
+            .service-item(data-aos="fade-left" data-aos-anchor=".useful-info" data-aos-duration="800" data-aos-delay="200")
+              .circle
+                span.icon.icon-check-large
+              h5.heading.lined Doctor Q
+              p 
+              a(href="#") Подробнее
+      // end useful-info
+    // end home-visits
+  include partials/_popups.pug

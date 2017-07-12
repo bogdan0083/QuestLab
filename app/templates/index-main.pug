@@ -1,0 +1,298 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Main page'
+  - var headerTransparent = true
+  - var activeMenu = -1
+  - var mainFooterNav = true
+block content
+    // start promo
+    .promo 
+      .swiper-container.promo-slider
+        .swiper-wrapper
+          // start swiper-slide
+          .swiper-slide
+            .bg(style="background-image: url(img/promo-bg1.jpg)")
+            .slide-content
+              .slide-top
+                .rect-first
+                  .rect-line.line1
+                  .rect-line.line2
+                  .rect-line.line3
+                  .rect-line.line4
+                  .fraction-pagination
+                    span.current 1
+                    span.last 3
+              .slide-middle
+                h1.slide-heading LabQuest меняет подход
+                p к тому, как можно обследовать и обследоваться
+              .slide-bottom
+                .rect-second
+                  a.button(href="#") Узнать больше
+                  .rect-line.line1
+                  .rect-line.line2
+                  .rect-line.line3
+                  .rect-line.line4
+          // end swiper-slide
+          // start swiper-slide
+          .swiper-slide
+            .bg(style="background-image: url(img/promo-bg1.jpg)")
+            .slide-content
+              .slide-top
+                .rect-first
+                  .rect-line.line1
+                  .rect-line.line2
+                  .rect-line.line3
+                  .rect-line.line4
+                  .fraction-pagination
+                    span.current 1
+                    span.last 3
+              .slide-middle
+                h1.slide-heading Легкий старт
+                p Франшиза без паушального взноса и роялти
+              .slide-bottom
+                .rect-second
+                  a.button(href="#") Узнать больше
+                  .rect-line.line1
+                  .rect-line.line2
+                  .rect-line.line3
+                  .rect-line.line4
+          // end swiper-slide
+          // start swiper-slide
+          .swiper-slide
+            .bg(style="background-image: url(img/franchise-bg1.jpg)")
+            .slide-content
+              .slide-top
+                .rect-first
+                  .rect-line.line1
+                  .rect-line.line2
+                  .rect-line.line3
+                  .rect-line.line4
+                  .fraction-pagination
+                    span.current 1
+                    span.last 3
+              .slide-middle
+                h1.slide-heading Комфорт и эффективность #[br] в управлении
+                p Комплексное бизнес-сопровождение, штат профессиональных управляющих
+              .slide-bottom
+                .rect-second
+                  a.button(href="#") Узнать больше
+                  .rect-line.line1
+                  .rect-line.line2
+                  .rect-line.line3
+                  .rect-line.line4
+          // end swiper-slide
+        .swiper-pagination
+    // end promo
+    // start laboratory-steps
+    section.laboratory-steps 
+      .container
+        h2.section-heading(data-aos="fade-up" data-aos-duration="800" data-aos-anchor=".laboratory-step" data-aos-delay="100") Спланируйте свое лабораторное обследование 
+        .laboratory-steps-group
+          .row 
+            .col-xs-12.col-sm-6.col-md-3.col-lg-3
+              a.laboratory-step(href="#" data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".laboratory-step" data-aos-delay="400")
+                .icon-wrap
+                  img(src='img/list-checked.png', alt='')
+                h4 Выбрать #[br] исследование
+                p 65 000 процедур
+                .circle.circle-large
+                  include data/arr-small.svg
+            .col-xs-12.col-sm-6.col-md-3.col-lg-3
+              a.laboratory-step(href="#" data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".laboratory-step" data-aos-delay="800")
+                .icon-wrap
+                  img(src='img/i6.png', alt='')
+                h4 Оформить предварительный #[br] заказ
+                p 16 000 вылеченных пациентов
+                .circle.circle-large
+                  include data/arr-small.svg
+            .col-xs-12.col-sm-6.col-md-3.col-lg-3
+              a.laboratory-step(href="#" data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".laboratory-step" data-aos-delay="1200")
+                .icon-wrap
+                  img(src='img/marker-broken.png', alt='')
+                h4 Посетить медицинский #[br] центр
+                p Комфортные условия
+                .circle.circle-large
+                  include data/arr-small.svg
+            .col-xs-12.col-sm-6.col-md-3.col-lg-3
+              a.laboratory-step.last(href="#" data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".laboratory-step" data-aos-delay="1600")
+                .icon-wrap
+                  img(src='img/colbe.png', alt='')
+                h4 Получить и интерпретировать #[br] результаты 
+                p Опыт лечения более 40 лет
+                .circle.circle-large
+                  include data/arr-small.svg
+    // end laboratory-steps
+    // start initiatives
+    .initiatives 
+      .initiatives-top
+        h2.section-heading Узнайте больше
+        p о наших здоровых инициативах
+      .initiatives-items(style="background-image: url(img/initiative-bg.jpg)")
+        // start initiative
+        .initiative(data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".initiatives" data-aos-delay="200")
+          .inner
+            .initiative-top
+              .circle
+                img.centered-icon(src="img/lab.png" alt="обследование")
+              h5 обследование
+            h4.initiative-title индивидуальные программы 
+            .initiative-content
+              .inner
+                .initiative-content-top
+                  button.button-plus
+                .initiative-content-wrap 
+                  p Решаем диагностическую задачу, поставленную вашим врачом, и даем прямые консультации
+                  a.button.button-gray Прочитать больше
+        // end initiative
+        // start initiative
+        .initiative(data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".initiatives" data-aos-delay="600")
+          .inner
+            .initiative-top
+              .circle
+                img.centered-icon(src="img/q.png" alt="doctor q")
+              h5 doctor q
+            h4.initiative-title коммуникации с лечащим врачом
+            .initiative-content
+              .inner
+                .initiative-content-top
+                  button.button-plus
+                .initiative-content-wrap 
+                  p Решаем диагностическую задачу, поставленную вашим врачом, и даем прямые консультации
+                  a.button.button-gray Прочитать больше
+        // end initiative
+        // start initiative
+        .initiative(data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".initiatives" data-aos-delay="1000")
+          .inner
+            .initiative-top
+              .circle
+                img.centered-icon(src="img/speech.png" alt="второе мнение")
+              h5 второе мнение
+            h4.initiative-title франция,  израиль, россия
+            .initiative-content
+              .inner
+                .initiative-content-top
+                  button.button-plus
+                .initiative-content-wrap 
+                  p Решаем диагностическую задачу, поставленную вашим врачом, и даем прямые консультации
+                  a.button.button-gray Прочитать больше
+        // end initiative
+        // start initiative
+        .initiative(data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".initiatives" data-aos-delay="1400")
+          .inner
+            .initiative-top
+              .circle
+                img.centered-icon(src="img/heart.png" alt="сервисы")
+              h5 сервисы
+            h4.initiative-title менеджер своего здоровья
+            .initiative-content
+              .inner
+                .initiative-content-top
+                  button.button-plus
+                .initiative-content-wrap 
+                  p Решаем диагностическую задачу, поставленную вашим врачом, и даем прямые консультации
+                  a.button.button-gray Прочитать больше
+        // end initiative
+        // start initiative
+        .initiative(data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".initiatives" data-aos-delay="1800")
+          .inner
+            .initiative-top
+              .circle
+                img.centered-icon(src="img/search.png" alt="журнал диагностики")
+              h5 журнал диагностики
+            h4.initiative-title поиск тысячи решений
+            .initiative-content
+              .inner
+                .initiative-content-top
+                  button.button-plus
+                .initiative-content-wrap
+                  p Решаем диагностическую задачу, поставленную вашим врачом, и даем прямые консультации
+                  a.button.button-gray Прочитать больше
+        // end initiative
+        // start initiative
+        .initiative(data-aos="fade-left" data-aos-duration="800" data-aos-anchor=".initiatives" data-aos-delay="2200")
+          .inner
+            .initiative-top
+              .circle
+                img.centered-icon(src="img/percent.png" alt="Все просто")
+              h5 акции
+            h4.initiative-title всё просто
+            .initiative-content
+              .inner
+                .initiative-content-top
+                  button.button-plus
+                .initiative-content-wrap 
+                  p Решаем диагностическую задачу, поставленную вашим врачом, и даем прямые консультации
+                  a.button.button-gray Прочитать больше
+        // end initiative
+    // end initiatives
+    // start news
+    .blc_news.padded-bottom
+      .blc_news_ttl
+        h2 Новости
+      .swiper-container.news_slr
+        .swiper-wrapper
+          .swiper-slide
+            ul.news_list
+              li
+                .desc
+                  a(href='#')
+                    .clearfix.desc_date
+                      .date
+                        h3 12
+                        .clearfix.date_in
+                          p мар
+                          span '17
+                      .d_img
+                        img(src='img/news-img.jpg', alt='')
+                    .desc_txt
+                      h4 Акция «Забота о мужском здоровье»	
+                      .brdh
+                      p
+                        | С 15 по 28 февраля 2017 г. в медицинском отделении LabQuest "Южный"...
+                      .read_more
+                        span Подробнее
+          .swiper-slide
+            ul.news_list
+              li
+                .desc
+                  a(href='')
+                    .clearfix.desc_date
+                      .date
+                        h3 10
+                        .clearfix.date_in
+                          p мар
+                          span '17
+                      .d_img
+                        img(src='img/empty_news.jpg', alt='')
+                    .desc_txt
+                      h4 Газета «Собеседник»: как нельзя лечиться от гриппа	
+                      .brdh
+                      p
+                        | Эксперт клинико-диагностической лаборатории LabQuest Сергей Иванов рассказал о том, почему...
+                      .read_more
+                        span Подробнее
+          .swiper-slide
+            ul.news_list
+              li
+                .desc
+                  a(href='')
+                    .clearfix.desc_date
+                      .date
+                        h3 01
+                        .clearfix.date_in
+                          p мар
+                          span '17
+                      .d_img
+                        img(src='img/empty_news.jpg', alt='')
+                    .desc_txt
+                      h4 Скидка выходного #[br] дня!	
+                      .brdh
+                      p
+                        | Каждое воскресенье с 12.02.17 по 26.03.17 во всех медицинских отделениях LabQuest действует...
+                      .read_more
+                        span Подробнее
+      .blc_news_btn
+        a.link_news_archive(href="#") Архив новостей
+    // end news
+    include partials/_popups.pug

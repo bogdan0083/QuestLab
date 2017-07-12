@@ -1,0 +1,719 @@
+//- title: Index Page
+extends layouts/_layout
+block head
+  - var title = 'Компания'
+  - var headerTransparent = true
+  - var activeMenu = 4
+  - var aboutFooterNav = true
+block content
+    // start franchise-promo
+    .promo.promo-no-slider.promo-direction-right
+      // start swiper-slide
+      .promo-content
+        .bg(style="background-image: url(img/about-bg1.jpg)")
+        .slide-content
+          .slide-top
+            .rect-first
+              .rect-line.line1
+              .rect-line.line2
+              .rect-line.line3
+              .rect-line.line4
+              .rect-caption О компании
+          .slide-middle
+            h1.slide-heading Клинико  диагностический комплекс LabQuest
+          .slide-bottom
+            .rect-second
+              .rect-line.line1
+              .rect-line.line2
+              .rect-line.line3
+              .rect-line.line4
+        .mid_list
+          .swiper-container.mid_list_slr
+            .swiper-wrapper
+              .swiper-slide
+                ul.mid_list
+                  li
+                    .desc
+                      include data/colbe.svg
+                      .brdh
+                      p Лаборатория клинической диагностики
+                      .button-plus
+              .swiper-slide
+                ul.mid_list
+                  li
+                    .desc
+                      include data/colbe2.svg
+                      .brdh
+                      p Микробиологическая лаборатория
+                      .button-plus
+              .swiper-slide
+                ul.mid_list
+                  li
+                    .desc
+                      include data/shpric.svg
+                      .brdh
+                      p Патоморфологическая лаборатория
+                      .button-plus
+      // end swiper-slide
+    // end promo
+    // start services
+    .services 
+      h2.section-heading(data-aos="fade-up" data-aos-anchor=".services" data-aos-duration="800") Сервисы
+      .swiper-container.services-slider
+        .gfs_nav(data-aos="fade-in" data-aos-anchor=".services" data-aos-duration="800" data-aos-delay="1400")
+          .swiper-pagination
+          .swiper-button-prev
+          .swiper-button-next
+        .swiper-wrapper
+          .swiper-slide
+            .service-item(data-aos="fade-up" data-aos-anchor=".services" data-aos-duration="800" data-aos-delay="400")
+              .circle
+                span.icon.icon-check-large
+              h4.heading.lined Система «Онлайн кабинет #[br] для клиентов»
+              p Применяйте простые действия для связи с лабораторией, используя компьютер и доступ в Интернет
+              a.button.button-gray(href="#") Войти
+          .swiper-slide
+            .service-item(data-aos="fade-up" data-aos-anchor=".services" data-aos-duration="800" data-aos-delay="800")
+              .circle
+                span.icon.icon-check-large
+              h4.heading.lined Служба #[br] «Выезд на дом»
+              p Комплексное лабораторное сопровождение там, где вам удобно
+              a.button.button-gray(href="#") Воспользоваться
+          .swiper-slide
+            .service-item(data-aos="fade-up" data-aos-anchor=".services" data-aos-duration="800" data-aos-delay="1200")
+              .circle
+                span.icon.icon-check-large
+              .heading.lined Предварительное оформление заказа 
+              p Ваша привилегия — оформление договора на лабораторное обследование быстро и удобно
+              a.button.button-gray(href="#") Оформить
+          .swiper-slide
+            .service-item
+              .circle
+                span.icon.icon-check-large
+              h4.heading.lined Персонификация
+              p Индивидуальная программа обследования
+              a.button.button-gray(href="#") Заказать у Doctor Q
+          .swiper-slide
+            .service-item
+              .circle
+                span.icon.icon-check-large
+              h4.heading.lined Оплата онлайн
+              p Оплачивайте стоимость выбранных тестов банковскими картами Visa, MasterCard через онлайн кабинет для клиентов
+              a.button.button-gray(href="#") Оплатить
+          .swiper-slide
+            .service-item
+              .circle
+                span.icon.icon-check-large
+              .heading.lined Общение
+              p Журнал диагностики, Видео-блог, Теги, Отзывы, Сообщества друзей
+              a.button.button-gray(href="#") Присоединиться
+          .swiper-slide
+            .service-item
+              .circle
+                span.icon.icon-check-large
+              h4.heading.lined Почта-сервис #[br] «Инфо-mail@»
+              p Обладать всей необходимой лабораторной информацией, знать о специальных предложениях. 
+              a.button.button-gray(href="#") Получать
+          .swiper-slide
+            .service-item
+              .circle
+                span.icon.icon-check-large
+              h4.heading.lined СМС-сервис #[br] «Готовность результатов»
+              p Оперативное информирование о статусе выполнения исследования в режиме реального времени с помощью мобильного телефона. 
+              a.button.button-gray(href="#") Быть в курсе
+    // end services
+    // start 3d
+    .show3d 
+      .container
+        p.show3d-desc Совершите виртуальный тур по многопрофильному лабораторному комплексу LabQuest 
+        .show3d-circle
+          .line1
+          .line2
+          .middle
+            .big-words
+              .word-wrap
+                .three 3
+              .word-wrap
+                .d d
+            .spaced тур
+          a.play-link.circle(href="#")
+            span.centered-icon
+              include data/play.svg
+          a.show3d-link(href="#")
+            span.text Посетить лабораторию
+            .circle
+              include data/edit.svg
+    // end 3d
+    // start specials
+    section.specials(data-aos="")
+      .container
+        h2.section-heading(data-aos="fade-down" data-aos-anchor=".specials" data-aos-duration="800") LabQuest — особым клиентам
+        .specials-group
+          .specials-item(data-aos="fade-left" data-aos-anchor=".specials" data-aos-duration="800" data-aos-delay="400")
+            .circle 1
+            .text Индивидуальная #[br] биологистика
+          .specials-item(data-aos="fade-left" data-aos-anchor=".specials" data-aos-duration="800" data-aos-delay="800")
+            .circle 2
+            .text Совместные лабораторные #[br] и медицинские проекты
+          .specials-item(data-aos="fade-left" data-aos-anchor=".specials" data-aos-duration="800" data-aos-delay="1200")
+            .circle 3
+            .text Приоритетное #[br] обслуживание
+          .specials-item.last(data-aos="fade-left" data-aos-anchor=".specials" data-aos-duration="800" data-aos-delay="1600")
+            .circle 4
+            .text Бесплатная интеграция #[br] информационных систем
+      a.specials-offer-link.fancybox(href="#enter_contract")
+        include data/doc-small.svg
+        span.text Запросить коммерческое предложение 
+      a.button.button-gray.fancybox(href="#double-pp") Узнать больше
+    // end specials
+    // start specials-secondary
+    .specials-secondary 
+      .container
+        .specials-group
+          .row
+            .col-xs-12.col-sm-12.col-md-4.col-lg-4
+              .specials-secondary-item
+                .icon-wrap
+                  img.centered-icon(src="img/people.png" alt='')
+                h5.heading Образование
+                p Присоединяйтесь к команде #[br] врачей, специалистов #[br]и руководителей
+            .col-xs-12.col-sm-12.col-md-4.col-lg-4
+              .specials-secondary-item
+                .icon-wrap
+                  img.centered-icon(src="img/i6.png" alt='')
+                h5.heading Практическая подготовка врачей 
+                p Тематическое консультирование #[br] для врачей и среднегомедицинского #[br] персонала
+            .col-xs-12.col-sm-12.col-md-4.col-lg-4
+              .specials-secondary-item.last
+                .icon-wrap
+                  img.centered-icon(src="img/speech-big.png" alt='')
+                h5.heading Консалтинг
+                p Возможность заочно #[br] проконсультироваться с лучшими #[br] врачами-консультантами
+    // end specials-secondary
+    // start vacancies
+    section.vacancies
+      // start vacancies-promo
+      .vacancies-promo 
+        .inner
+          .circle
+            include data/handshake.svg
+          h2.lined Присоединяйтесь
+          .text к команде LabQuest
+      // end vacancies-promo
+      .tabs(data-slider=".vacancies-slider")
+        .container
+          a.tab-pane(href="#" role="button" data-idx="0") Вакансии для медицинского персонала
+          a.tab-pane(href="#" role="button" data-idx="1") Вакансии для административного персонала
+      // start vacancies-slider
+      .swiper-container.vacancies-slider
+        .swiper-wrapper
+          // OUTER SLIDE
+          .swiper-slide
+            .swiper-container.vacancies-list
+              .gfs_nav
+                .swiper-pagination
+                .swiper-button-prev
+                .swiper-button-next
+              .swiper-wrapper
+                // INNER SLIDE
+                .swiper-slide
+                  ul
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                // INNER SLIDE
+                .swiper-slide
+                  ul
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                // INNER SLIDE
+                .swiper-slide
+                  ul
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+          // OUTER SLIDE
+          .swiper-slide
+            .swiper-container.vacancies-list
+              .gfs_nav
+                .swiper-pagination
+                .swiper-button-prev
+                .swiper-button-next
+              .swiper-wrapper
+                // INNER SLIDE
+                .swiper-slide
+                  ul
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+                    // start vacancy
+                    li.vacancy
+                      a.vacancy-top.js-vacancy-trigger(href="#" role="button")
+                        .container 
+                          .inner Медицинский лабораторный техник
+                      .vacancy-info
+                        .container
+                          .row
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-experience Опыт работы #[br] 1-3 года
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-salary Уровень зарплаты #[br] По итогам собеседования
+                            .col-xs-12.col-sm-4.col-md-4.col-lg-4
+                              .vacancy-info-item.vacancy-info-city Город #[br] Москва, м. Киевская
+                      .vacancy-details
+                        .container
+                          .vacancy-detail #[span Требования:] Среднее специальное медицинское образование (фельдшер-лаборант, медицинский лабораторный техник/технолог)‚ наличие действующего сертификата
+                          .vacancy-detail #[span Обязанности:] Освоение методик направления, работа c электронной базой данных. Повышение квалификации и подтверждение сертификата оплачивается компанией
+                          .vacancy-details-agreed
+                            label.checkbox
+                              input(type="checkbox" name="agreed")
+                              span Я согласен(а) на обработку #[a(href="#") предоставленных мною персональных данных]
+                          a.button.button-separate.fancybox(href="#job_seekers")
+                            span.text Откликнуться на вакансию
+                            span.icon
+                              include data/edit.svg
+                    // end vacancy
+      // end vacancies-slider
+      .vacancies-bottom
+        a.button.button-icon-cubes.button-gray.js-show-vacancies(href="#")
+          span Показать вакансии
+          span.ic
+            include data/squares.svg
+    // end vacancies
+    // start our-location
+    section.our-location
+      button.cross-button.js-map-trigger
+        span
+      .location-map
+      .container
+        .our-location-content
+          h4 Как попасть к нам в гости? 
+          include data/pointer.svg
+          address LabQuest Россия #[br] г. Москва, Бережковская набережная, #[br] д. 20, стр. 13
+          a.button.button-icon.button-gray.js-show-location(href="#")
+            span Показать на карте
+            span.ic
+              include data/paperplane.svg
+    // end our-location
+    // start our-style
+    .our-style 
+      a.our-style-download(href="#")
+        .img-wrap
+          img(src="img/style.jpg" alt="Руководство по фирменному стилю")
+        h4 Скачать
+        p Руководство по фирменному стилю 
+        .size (3,2 мб)
+        include data/arr-long-down.svg
+      .our-style-files
+        a.our-style-file(href="#") 
+          include data/doc-small.svg
+          span Медиа-кит
+        a.our-style-file(href="#") 
+          include data/doc-small.svg
+          span Медиатека
+        a.our-style-file(href="#") 
+          include data/doc-small.svg
+          span Инфографика
+      a.our-style-download(href="#")
+        .img-wrap
+          img(src="img/logo-transparent.png" alt="Логотип компании")
+        h4 Скачать
+        p Логотип компании
+        .size (3,2 мб)
+        include data/arr-long-down.svg
+    // end our-style
+    include partials/_popups.pug

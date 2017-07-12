@@ -264,7 +264,16 @@ var newSlr = new Swiper('.news_slr', {
     observer:true,
     observeParents:true,
     preventClicks: false,
-	loopAdditionalSlides: 0,
+    nextButton: '.news_slr .swiper-button-next',
+    prevButton: '.news_slr .swiper-button-prev',
+    pagination: '.news_slr .swiper-pagination',
+    paginationType: 'fraction',
+  	paginationFractionRender: function (swiper, currentClassName, totalClassName) {
+  	      return '<span class="' + currentClassName + '"></span>' +
+  	             ' <span class="spr"></span> ' +
+  	             '<span class="' + totalClassName + '"></span>';
+  	},
+  	loopAdditionalSlides: 0,
 	slidesPerView: 3,
     breakpoints: {
 	    850: {
